@@ -1,0 +1,3054 @@
+### PROJECT STRUCTURE ###
+./
+    .gitignore
+    build.gradle.kts
+    gradle.properties
+    gradlew
+    gradlew.bat
+    local.properties
+    settings.gradle.kts
+    .gradle/
+        config.properties
+        file-system.probe
+        8.13/
+            gc.properties
+            checksums/
+                checksums.lock
+                md5-checksums.bin
+                sha1-checksums.bin
+            executionHistory/
+                executionHistory.bin
+                executionHistory.lock
+            expanded/
+            fileChanges/
+                last-build.bin
+            fileHashes/
+                fileHashes.bin
+                fileHashes.lock
+                resourceHashesCache.bin
+            vcsMetadata/
+        buildOutputCleanup/
+            buildOutputCleanup.lock
+            cache.properties
+            outputFiles.bin
+        vcs-1/
+            gc.properties
+    .idea/
+        .gitignore
+        .name
+        AndroidProjectSystem.xml
+        assetWizardSettings.xml
+        compiler.xml
+        deploymentTargetSelector.xml
+        deviceManager.xml
+        gradle.xml
+        MarsCodeWorkspaceAppSettings.xml
+        migrations.xml
+        misc.xml
+        modules.xml
+        runConfigurations.xml
+        workspace.xml
+        caches/
+        codeStyles/
+            codeStyleConfig.xml
+            Project.xml
+        inspectionProfiles/
+            Project_Default.xml
+        modules/
+            app/
+                My_Application.app.main.iml
+    .kotlin/
+        sessions/
+    app/
+        .gitignore
+        build.gradle.kts
+        proguard-rules.pro
+        build/
+            generated/
+                res/
+                    pngs/
+                        debug/
+                    resValues/
+                        androidTest/
+                        debug/
+                updated_navigation_xml/
+                    debug/
+                    debugAndroidTest/
+            intermediates/
+                aar_metadata_check/
+                    debug/
+                        checkDebugAarMetadata/
+                    debugAndroidTest/
+                        checkDebugAndroidTestAarMetadata/
+                annotation_processor_list/
+                    debug/
+                        javaPreCompileDebug/
+                            annotationProcessors.json
+                    debugAndroidTest/
+                        javaPreCompileDebugAndroidTest/
+                            annotationProcessors.json
+                    debugUnitTest/
+                        javaPreCompileDebugUnitTest/
+                            annotationProcessors.json
+                apk_ide_redirect_file/
+                    debug/
+                        createDebugApkListingFileRedirect/
+                            redirect.txt
+                    debugAndroidTest/
+                        createDebugAndroidTestApkListingFileRedirect/
+                            redirect.txt
+                app_metadata/
+                    debug/
+                        writeDebugAppMetadata/
+                            app-metadata.properties
+                assets/
+                    debug/
+                        mergeDebugAssets/
+                            questions_full.json
+                    debugAndroidTest/
+                        mergeDebugAndroidTestAssets/
+                compatible_screen_manifest/
+                    debug/
+                        createDebugCompatibleScreenManifests/
+                            output-metadata.json
+                compiled_navigation_res/
+                    debug/
+                        compileDebugNavigationResources/
+                    debugAndroidTest/
+                        compileDebugAndroidTestNavigationResources/
+                compile_and_runtime_not_namespaced_r_class_jar/
+                    debug/
+                        processDebugResources/
+                            R.jar
+                    debugAndroidTest/
+                        processDebugAndroidTestResources/
+                            R.jar
+                compile_app_classes_jar/
+                    debug/
+                        bundleDebugClassesToCompileJar/
+                            classes.jar
+                compressed_assets/
+                    debug/
+                        compressDebugAssets/
+                    debugAndroidTest/
+                        compressDebugAndroidTestAssets/
+                data_binding_layout_info_type_merge/
+                    debug/
+                        mergeDebugResources/
+                    debugAndroidTest/
+                        mergeDebugAndroidTestResources/
+                data_binding_layout_info_type_package/
+                    debug/
+                        packageDebugResources/
+                desugar_graph/
+                    debug/
+                        dexBuilderDebug/
+                    debugAndroidTest/
+                        dexBuilderDebugAndroidTest/
+                dex/
+                    debug/
+                        mergeExtDexDebug/
+                            classes.dex
+                            classes2.dex
+                            classes3.dex
+                        mergeLibDexDebug/
+                        mergeProjectDexDebug/
+                    debugAndroidTest/
+                        mergeExtDexDebugAndroidTest/
+                            classes.dex
+                        mergeLibDexDebugAndroidTest/
+                        mergeProjectDexDebugAndroidTest/
+                dex_archive_input_jar_hashes/
+                    debug/
+                        dexBuilderDebug/
+                            out
+                    debugAndroidTest/
+                        dexBuilderDebugAndroidTest/
+                            out
+                dex_number_of_buckets_file/
+                    debug/
+                        dexBuilderDebug/
+                            out
+                    debugAndroidTest/
+                        dexBuilderDebugAndroidTest/
+                            out
+                duplicate_classes_check/
+                    debug/
+                        checkDebugDuplicateClasses/
+                    debugAndroidTest/
+                        checkDebugAndroidTestDuplicateClasses/
+                external_file_lib_dex_archives/
+                    debug/
+                        desugarDebugFileDependencies/
+                    debugAndroidTest/
+                        desugarDebugAndroidTestFileDependencies/
+                external_libs_dex_archive/
+                    debug/
+                        dexBuilderDebug/
+                    debugAndroidTest/
+                        dexBuilderDebugAndroidTest/
+                external_libs_dex_archive_with_artifact_transforms/
+                    debug/
+                        dexBuilderDebug/
+                    debugAndroidTest/
+                        dexBuilderDebugAndroidTest/
+                incremental/
+                    debug/
+                        mergeDebugResources/
+                            compile-file-map.properties
+                            merger.xml
+                        packageDebugResources/
+                            compile-file-map.properties
+                            merger.xml
+                    debug-mergeJavaRes/
+                        merge-state
+                        zip-cache/
+                            +Y0lEz7dyjJlyvEtFcIC1g==
+                            1GcX6m+1D+33tWzBsEs1lg==
+                            22TH2lWzDI3kXEXe6NkIGw==
+                            2r+aHJeX7kpXbCOM8TIIsA==
+                            49F4801NCqUUh66+_GJGNQ==
+                            4eHzIKfncQhuCEP2Ie9W_w==
+                            4NQDsI9uN88t+YV9BA7m9w==
+                            4NUIutQGEDBSQNawaOi7bA==
+                            4UMuK88Dg_wC4zqf2KO7vA==
+                            6BZd8Ep8Ho6FuSupeYj0IA==
+                            7PkNi_JF_v1kojTtfHN_Xg==
+                            7UWr6zKR71nR+Gi3+1e8Bg==
+                            7xd40a2blHMpYZt7FzpHZw==
+                            7ZWQRsjZY9NhrhUSUfKz9A==
+                            8QDch4YNGC0b7e1YMlJv+Q==
+                            8t8cq42tQ5mciwlzu5T2NA==
+                            9JZgQkxrb8YB6wsT0mO44g==
+                            9Xo68J6qGgEABhiQoSaHqQ==
+                            9zb7PJGzJZCg9OV2o+OgBg==
+                            A3nP73wM2et4kLqfHoHB9A==
+                            AA8479v9XSxz1pPM4qDl5g==
+                            Ae58_WCyAkURQWhEjoOvSg==
+                            Af78kCv6CEwJbyZIl+8GXA==
+                            AIoa7E1Cme+HIqbIZAlJMg==
+                            btsitKWkqCahqCBvIrEsWA==
+                            Bttxeb7IgaGZTL2DQbRJ7g==
+                            cPuylOvPalpdkA0zFDY2Nw==
+                            D6tJReD1kdTIfiLZCgVO7w==
+                            DdIBkzJ8P8YniiwBiFAnmw==
+                            dfuX3uzPkeAUiP9wV1R0tw==
+                            Dw+fGUWRWjG3JLnszFKmBQ==
+                            DYhBugMxFt2L+LvGbkPYiA==
+                            E1jSfTl9TQoWR6KVMbXgDA==
+                            E1WgLnpJaVcXP8yzmxb4IQ==
+                            EreX4a5Zo8uOjbNt5k18aQ==
+                            eTcXnRf3Eu_pzEeTcPnkbQ==
+                            EuHdIC4EQs8GKxAxD64cyw==
+                            ewuYbCpmnTLje4TMAZggbA==
+                            fFr5k3BhJNw82lWyVe1X1A==
+                            fk7eQQzpDKQprlltJnVmNg==
+                            FkxpKkYTxX4fBG5NiWACcA==
+                            FnYoj1tyMDiApMGlhFlSYg==
+                            FtfJ0PqPUZagTTv+TUEyew==
+                            fuf8dKDNpLn4v_fF8a9ajA==
+                            Fv95IsEMjWZYjEGTT3SXZg==
+                            fyKXci5TOA02UuJi12TrjA==
+                            GMxoHRdcF+5N6b3Z9VBAow==
+                            HE3UZf6u4C+pWjKW+HMjLg==
+                            Hlau9jWHWeoOXf6FHWKOhw==
+                            iP5b1OQcopciUUelqAzAlQ==
+                            ISgXjYp2fRtqSdoIni2EUQ==
+                            IytoQuW6WKg5ozBALy3AZw==
+                            JDCXuJm_ctqWhIWKuo9Lgg==
+                            jk86fAPS7+Idn7qfSiqKTg==
+                            jNuFP9s52RHJ_gQf+Fj3uA==
+                            JoaoCmt1B1b84KK57ficdQ==
+                            k3+uKDyFGPRD_9GAYzNLiA==
+                            KLq6qNyYXGEeyaS00n_+IA==
+                            KTv+IvNCpJ0bvLXFfnW5pg==
+                            L4JkgUDlH0K2gSONfXmzzw==
+                            L9jFh6aF4qO8Iez_ZsfSow==
+                            LQU9Fq4kDDUr3rrtKPzIDw==
+                            M5ZY1KbLL5usBwyvoN+TUA==
+                            mhbNYvnKnmy3gaFwrKTBEA==
+                            mtz5N7I+3P7BbkdMJ7okUA==
+                            nBJRYZy+BLUyzctcjIJLtw==
+                            nGmuiBev8GicPvOBlJob2w==
+                            nJFY+GHmGHUCO1KApdBzjw==
+                            nMwTQuSrDlqMs6jPJ0H6kA==
+                            OrymP7jnwZA_tVUBJ+66uQ==
+                            OTdmdtQbnx5a2hHcymX+Bw==
+                            OugHE6inq8ArYnGo79ywwg==
+                            P8OR3qzN1yPsgdmY9XWohw==
+                            Pe+83QTAe92U9NQeRJmvVg==
+                            PecXG4TZ5qpHnSSW6XL5vw==
+                            pM7hHbSh7GOie6H8zKneOA==
+                            pvc+K7bF8yxgOr_C4o7PtQ==
+                            RkjXsnYm67kUAJv91j4s9Q==
+                            rpHfqjTl6Xgvh_8N3jZO_A==
+                            S1qRcoGwbx5G0J7o_tcXEQ==
+                            t0Wi1au4lEDZuQGIkCLx5A==
+                            tNjrcsCA64JWeBYzszpeMg==
+                            u9qn3vJyI2+_iR7R9bY2cg==
+                            Uh0LDUsJdte9pPdKT8si+w==
+                            u_upOie4ap750XFWQKUgyw==
+                            vqur4cfIWkSu04WqTPUxFw==
+                            wg1X0Dp1PptpDFyz8n_c2A==
+                            WpX5SBKmLeaMOMS5lpPYKQ==
+                            x3kL_Xh8rK482nzittZySw==
+                            xLsXPo_dhs+CyUGf2Xsufw==
+                            xY9pYCCHOzUMx2doZpgrLA==
+                            Y7foyVkgzK_vsUNdBd3yMA==
+                            yQwEjOSHUiMBYKowcjhtsQ==
+                            Z+I+7D5Oy+ZsJg6CbJ6JlA==
+                            Z7O5n0ncUumPC3wJQ0v0QA==
+                            zFlAIs1UONyAFwHN8OVc2A==
+                            _24B3GvhW3utnmexMKJTKA==
+                            _7c2BMJGdzNvDqE17kOwpw==
+                            _GtrMs5nyumfOodNAs463A==
+                            _Yh2NV6Um_MIe3krMWHdYQ==
+                    debugAndroidTest/
+                        mergeDebugAndroidTestResources/
+                            compile-file-map.properties
+                            merger.xml
+                    debugAndroidTest-mergeJavaRes/
+                        merge-state
+                        zip-cache/
+                            1keOcerIcq9Ezh9+6+bTmw==
+                            7iXiHkgP3kirH5MXUsRxiw==
+                            a++aJnX1ifF6il5EfeelSg==
+                            BQHDkaTIEi7EeiYfwXiBHw==
+                            FcYf7kuQYzZX0MhhzYHA3g==
+                            fRvLTHAoFZU+WxiO2AmhKQ==
+                            oSNaPfv73l3+fO9YAV_2RA==
+                            q0q63Vi+s_jVnv8D+g26xA==
+                            QyODOPv3MRJKWIuSa2XcrA==
+                            RvKzGVOEwu56rU9avTmBbg==
+                            sNkKNNzkDAzIw_Sp92FRHw==
+                            uDEdX1cDBftpszZns8e_ww==
+                            UDEEtuhxnmthzu6dGJhofw==
+                            vRS8J4E0SN42qF2AJuYlnw==
+                            xs6cqTG18onJkG_IxJ10CA==
+                            XTuzR6jTNVrpsDnpMVqfWA==
+                            _DCzcM+xmyRPggEnCMWiIw==
+                            _eK7I7Q0WdnN01GF97xULQ==
+                    mergeDebugAndroidTestAssets/
+                        merger.xml
+                    mergeDebugAndroidTestJniLibFolders/
+                        merger.xml
+                    mergeDebugAndroidTestShaders/
+                        merger.xml
+                    mergeDebugAssets/
+                        merger.xml
+                    mergeDebugJniLibFolders/
+                        merger.xml
+                    mergeDebugShaders/
+                        merger.xml
+                    packageDebug/
+                        tmp/
+                    packageDebugAndroidTest/
+                        tmp/
+                java_res/
+                    debug/
+                        processDebugJavaRes/
+                    debugAndroidTest/
+                        processDebugAndroidTestJavaRes/
+                linked_resources_binary_format/
+                    debug/
+                        processDebugResources/
+                            linked-resources-binary-format-debug.ap_
+                            output-metadata.json
+                    debugAndroidTest/
+                        processDebugAndroidTestResources/
+                            linked-resources-binary-format.ap_
+                            output-metadata.json
+                local_only_symbol_list/
+                    debug/
+                        parseDebugLocalResources/
+                            R-def.txt
+                manifest_merge_blame_file/
+                    debug/
+                        processDebugMainManifest/
+                            manifest-merger-blame-debug-report.txt
+                    debugAndroidTest/
+                        processDebugAndroidTestManifest/
+                            manifest-merger-blame-debug-androidTest-report.txt
+                merged_java_res/
+                    debug/
+                        mergeDebugJavaResource/
+                            base.jar
+                    debugAndroidTest/
+                        mergeDebugAndroidTestJavaResource/
+                            feature-app.jar
+                merged_jni_libs/
+                    debug/
+                        mergeDebugJniLibFolders/
+                    debugAndroidTest/
+                        mergeDebugAndroidTestJniLibFolders/
+                merged_manifest/
+                    debug/
+                        processDebugMainManifest/
+                            AndroidManifest.xml
+                merged_manifests/
+                    debug/
+                        processDebugManifest/
+                            AndroidManifest.xml
+                            output-metadata.json
+                merged_native_libs/
+                    debug/
+                        mergeDebugNativeLibs/
+                merged_res/
+                    debug/
+                        mergeDebugResources/
+                            drawable_ic_launcher_background.xml.flat
+                            drawable_ic_launcher_foreground.xml.flat
+                            drawable_luanch_icon_foreground.xml.flat
+                            font_msyh.ttf.flat
+                            mipmap-anydpi-v26_ic_launch.xml.flat
+                            mipmap-anydpi-v26_ic_launcher.xml.flat
+                            mipmap-anydpi-v26_ic_launcher_round.xml.flat
+                            mipmap-anydpi-v26_ic_launch_round.xml.flat
+                            mipmap-anydpi-v26_luanch_icon.xml.flat
+                            mipmap-anydpi-v26_luanch_icon_round.xml.flat
+                            mipmap-hdpi_ic_launch.webp.flat
+                            mipmap-hdpi_ic_launcher.webp.flat
+                            mipmap-hdpi_ic_launcher_background.webp.flat
+                            mipmap-hdpi_ic_launcher_foreground.webp.flat
+                            mipmap-hdpi_ic_launcher_round.webp.flat
+                            mipmap-hdpi_ic_launch_foreground.webp.flat
+                            mipmap-hdpi_ic_launch_round.webp.flat
+                            mipmap-hdpi_luanch_icon.webp.flat
+                            mipmap-hdpi_luanch_icon_foreground.webp.flat
+                            mipmap-hdpi_luanch_icon_round.webp.flat
+                            mipmap-mdpi_ic_launch.webp.flat
+                            mipmap-mdpi_ic_launcher.webp.flat
+                            mipmap-mdpi_ic_launcher_background.webp.flat
+                            mipmap-mdpi_ic_launcher_foreground.webp.flat
+                            mipmap-mdpi_ic_launcher_round.webp.flat
+                            mipmap-mdpi_ic_launch_foreground.webp.flat
+                            mipmap-mdpi_ic_launch_round.webp.flat
+                            mipmap-mdpi_luanch_icon.webp.flat
+                            mipmap-mdpi_luanch_icon_foreground.webp.flat
+                            mipmap-mdpi_luanch_icon_round.webp.flat
+                            mipmap-xhdpi_ic_launch.webp.flat
+                            mipmap-xhdpi_ic_launcher.webp.flat
+                            mipmap-xhdpi_ic_launcher_background.webp.flat
+                            mipmap-xhdpi_ic_launcher_foreground.webp.flat
+                            mipmap-xhdpi_ic_launcher_round.webp.flat
+                            mipmap-xhdpi_ic_launch_foreground.webp.flat
+                            mipmap-xhdpi_ic_launch_round.webp.flat
+                            mipmap-xhdpi_luanch_icon.webp.flat
+                            mipmap-xhdpi_luanch_icon_foreground.webp.flat
+                            mipmap-xhdpi_luanch_icon_round.webp.flat
+                            mipmap-xxhdpi_ic_launch.webp.flat
+                            mipmap-xxhdpi_ic_launcher.webp.flat
+                            mipmap-xxhdpi_ic_launcher_background.webp.flat
+                            mipmap-xxhdpi_ic_launcher_foreground.webp.flat
+                            mipmap-xxhdpi_ic_launcher_round.webp.flat
+                            mipmap-xxhdpi_ic_launch_foreground.webp.flat
+                            mipmap-xxhdpi_ic_launch_round.webp.flat
+                            mipmap-xxhdpi_luanch_icon.webp.flat
+                            mipmap-xxhdpi_luanch_icon_foreground.webp.flat
+                            mipmap-xxhdpi_luanch_icon_round.webp.flat
+                            mipmap-xxxhdpi_ic_launch.webp.flat
+                            mipmap-xxxhdpi_ic_launcher.webp.flat
+                            mipmap-xxxhdpi_ic_launcher_background.webp.flat
+                            mipmap-xxxhdpi_ic_launcher_foreground.webp.flat
+                            mipmap-xxxhdpi_ic_launcher_round.webp.flat
+                            mipmap-xxxhdpi_ic_launch_foreground.webp.flat
+                            mipmap-xxxhdpi_ic_launch_round.webp.flat
+                            mipmap-xxxhdpi_luanch_icon.webp.flat
+                            mipmap-xxxhdpi_luanch_icon_foreground.webp.flat
+                            mipmap-xxxhdpi_luanch_icon_round.webp.flat
+                            values-af_values-af.arsc.flat
+                            values-am_values-am.arsc.flat
+                            values-ar_values-ar.arsc.flat
+                            values-as_values-as.arsc.flat
+                            values-az_values-az.arsc.flat
+                            values-b+sr+Latn_values-b+sr+Latn.arsc.flat
+                            values-be_values-be.arsc.flat
+                            values-bg_values-bg.arsc.flat
+                            values-bn_values-bn.arsc.flat
+                            values-bs_values-bs.arsc.flat
+                            values-ca_values-ca.arsc.flat
+                            values-cs_values-cs.arsc.flat
+                            values-da_values-da.arsc.flat
+                            values-de_values-de.arsc.flat
+                            values-el_values-el.arsc.flat
+                            values-en-rAU_values-en-rAU.arsc.flat
+                            values-en-rCA_values-en-rCA.arsc.flat
+                            values-en-rGB_values-en-rGB.arsc.flat
+                            values-en-rIN_values-en-rIN.arsc.flat
+                            values-en-rXC_values-en-rXC.arsc.flat
+                            values-es-rUS_values-es-rUS.arsc.flat
+                            values-es_values-es.arsc.flat
+                            values-et_values-et.arsc.flat
+                            values-eu_values-eu.arsc.flat
+                            values-fa_values-fa.arsc.flat
+                            values-fi_values-fi.arsc.flat
+                            values-fr-rCA_values-fr-rCA.arsc.flat
+                            values-fr_values-fr.arsc.flat
+                            values-gl_values-gl.arsc.flat
+                            values-gu_values-gu.arsc.flat
+                            values-h720dp-v13_values-h720dp-v13.arsc.flat
+                            values-hdpi-v4_values-hdpi-v4.arsc.flat
+                            values-hi_values-hi.arsc.flat
+                            values-hr_values-hr.arsc.flat
+                            values-hu_values-hu.arsc.flat
+                            values-hy_values-hy.arsc.flat
+                            values-in_values-in.arsc.flat
+                            values-is_values-is.arsc.flat
+                            values-it_values-it.arsc.flat
+                            values-iw_values-iw.arsc.flat
+                            values-ja_values-ja.arsc.flat
+                            values-ka_values-ka.arsc.flat
+                            values-kk_values-kk.arsc.flat
+                            values-km_values-km.arsc.flat
+                            values-kn_values-kn.arsc.flat
+                            values-ko_values-ko.arsc.flat
+                            values-ky_values-ky.arsc.flat
+                            values-land_values-land.arsc.flat
+                            values-large-v4_values-large-v4.arsc.flat
+                            values-ldltr-v21_values-ldltr-v21.arsc.flat
+                            values-lo_values-lo.arsc.flat
+                            values-lt_values-lt.arsc.flat
+                            values-lv_values-lv.arsc.flat
+                            values-mk_values-mk.arsc.flat
+                            values-ml_values-ml.arsc.flat
+                            values-mn_values-mn.arsc.flat
+                            values-mr_values-mr.arsc.flat
+                            values-ms_values-ms.arsc.flat
+                            values-my_values-my.arsc.flat
+                            values-nb_values-nb.arsc.flat
+                            values-ne_values-ne.arsc.flat
+                            values-night-v8_values-night-v8.arsc.flat
+                            values-nl_values-nl.arsc.flat
+                            values-or_values-or.arsc.flat
+                            values-pa_values-pa.arsc.flat
+                            values-pl_values-pl.arsc.flat
+                            values-port_values-port.arsc.flat
+                            values-pt-rBR_values-pt-rBR.arsc.flat
+                            values-pt-rPT_values-pt-rPT.arsc.flat
+                            values-pt_values-pt.arsc.flat
+                            values-ro_values-ro.arsc.flat
+                            values-ru_values-ru.arsc.flat
+                            values-si_values-si.arsc.flat
+                            values-sk_values-sk.arsc.flat
+                            values-sl_values-sl.arsc.flat
+                            values-sq_values-sq.arsc.flat
+                            values-sr_values-sr.arsc.flat
+                            values-sv_values-sv.arsc.flat
+                            values-sw600dp-v13_values-sw600dp-v13.arsc.flat
+                            values-sw_values-sw.arsc.flat
+                            values-ta_values-ta.arsc.flat
+                            values-te_values-te.arsc.flat
+                            values-th_values-th.arsc.flat
+                            values-tl_values-tl.arsc.flat
+                            values-tr_values-tr.arsc.flat
+                            values-uk_values-uk.arsc.flat
+                            values-ur_values-ur.arsc.flat
+                            values-uz_values-uz.arsc.flat
+                            values-v16_values-v16.arsc.flat
+                            values-v17_values-v17.arsc.flat
+                            values-v18_values-v18.arsc.flat
+                            values-v21_values-v21.arsc.flat
+                            values-v22_values-v22.arsc.flat
+                            values-v23_values-v23.arsc.flat
+                            values-v24_values-v24.arsc.flat
+                            values-v25_values-v25.arsc.flat
+                            values-v26_values-v26.arsc.flat
+                            values-v28_values-v28.arsc.flat
+                            values-v30_values-v30.arsc.flat
+                            values-vi_values-vi.arsc.flat
+                            values-watch-v20_values-watch-v20.arsc.flat
+                            values-watch-v21_values-watch-v21.arsc.flat
+                            values-xlarge-v4_values-xlarge-v4.arsc.flat
+                            values-zh-rCN_values-zh-rCN.arsc.flat
+                            values-zh-rHK_values-zh-rHK.arsc.flat
+                            values-zh-rTW_values-zh-rTW.arsc.flat
+                            values-zu_values-zu.arsc.flat
+                            values_values.arsc.flat
+                            xml_backup_rules.xml.flat
+                            xml_data_extraction_rules.xml.flat
+                            xml_provider_paths.xml.flat
+                    debugAndroidTest/
+                        mergeDebugAndroidTestResources/
+                            values-af_values-af.arsc.flat
+                            values-am_values-am.arsc.flat
+                            values-ar_values-ar.arsc.flat
+                            values-as_values-as.arsc.flat
+                            values-az_values-az.arsc.flat
+                            values-b+sr+Latn_values-b+sr+Latn.arsc.flat
+                            values-be_values-be.arsc.flat
+                            values-bg_values-bg.arsc.flat
+                            values-bn_values-bn.arsc.flat
+                            values-bs_values-bs.arsc.flat
+                            values-ca_values-ca.arsc.flat
+                            values-cs_values-cs.arsc.flat
+                            values-da_values-da.arsc.flat
+                            values-de_values-de.arsc.flat
+                            values-el_values-el.arsc.flat
+                            values-en-rAU_values-en-rAU.arsc.flat
+                            values-en-rCA_values-en-rCA.arsc.flat
+                            values-en-rGB_values-en-rGB.arsc.flat
+                            values-en-rIN_values-en-rIN.arsc.flat
+                            values-en-rXC_values-en-rXC.arsc.flat
+                            values-es-rUS_values-es-rUS.arsc.flat
+                            values-es_values-es.arsc.flat
+                            values-et_values-et.arsc.flat
+                            values-eu_values-eu.arsc.flat
+                            values-fa_values-fa.arsc.flat
+                            values-fi_values-fi.arsc.flat
+                            values-fr-rCA_values-fr-rCA.arsc.flat
+                            values-fr_values-fr.arsc.flat
+                            values-gl_values-gl.arsc.flat
+                            values-gu_values-gu.arsc.flat
+                            values-hi_values-hi.arsc.flat
+                            values-hr_values-hr.arsc.flat
+                            values-hu_values-hu.arsc.flat
+                            values-hy_values-hy.arsc.flat
+                            values-in_values-in.arsc.flat
+                            values-is_values-is.arsc.flat
+                            values-it_values-it.arsc.flat
+                            values-iw_values-iw.arsc.flat
+                            values-ja_values-ja.arsc.flat
+                            values-ka_values-ka.arsc.flat
+                            values-kk_values-kk.arsc.flat
+                            values-km_values-km.arsc.flat
+                            values-kn_values-kn.arsc.flat
+                            values-ko_values-ko.arsc.flat
+                            values-ky_values-ky.arsc.flat
+                            values-lo_values-lo.arsc.flat
+                            values-lt_values-lt.arsc.flat
+                            values-lv_values-lv.arsc.flat
+                            values-mk_values-mk.arsc.flat
+                            values-ml_values-ml.arsc.flat
+                            values-mn_values-mn.arsc.flat
+                            values-mr_values-mr.arsc.flat
+                            values-ms_values-ms.arsc.flat
+                            values-my_values-my.arsc.flat
+                            values-nb_values-nb.arsc.flat
+                            values-ne_values-ne.arsc.flat
+                            values-nl_values-nl.arsc.flat
+                            values-or_values-or.arsc.flat
+                            values-pa_values-pa.arsc.flat
+                            values-pl_values-pl.arsc.flat
+                            values-pt-rBR_values-pt-rBR.arsc.flat
+                            values-pt-rPT_values-pt-rPT.arsc.flat
+                            values-pt_values-pt.arsc.flat
+                            values-ro_values-ro.arsc.flat
+                            values-ru_values-ru.arsc.flat
+                            values-si_values-si.arsc.flat
+                            values-sk_values-sk.arsc.flat
+                            values-sl_values-sl.arsc.flat
+                            values-sq_values-sq.arsc.flat
+                            values-sr_values-sr.arsc.flat
+                            values-sv_values-sv.arsc.flat
+                            values-sw_values-sw.arsc.flat
+                            values-ta_values-ta.arsc.flat
+                            values-te_values-te.arsc.flat
+                            values-th_values-th.arsc.flat
+                            values-tl_values-tl.arsc.flat
+                            values-tr_values-tr.arsc.flat
+                            values-uk_values-uk.arsc.flat
+                            values-ur_values-ur.arsc.flat
+                            values-uz_values-uz.arsc.flat
+                            values-v18_values-v18.arsc.flat
+                            values-v21_values-v21.arsc.flat
+                            values-v28_values-v28.arsc.flat
+                            values-vi_values-vi.arsc.flat
+                            values-zh-rCN_values-zh-rCN.arsc.flat
+                            values-zh-rHK_values-zh-rHK.arsc.flat
+                            values-zh-rTW_values-zh-rTW.arsc.flat
+                            values-zu_values-zu.arsc.flat
+                            values_values.arsc.flat
+                merged_res_blame_folder/
+                    debug/
+                        mergeDebugResources/
+                    debugAndroidTest/
+                        mergeDebugAndroidTestResources/
+                merged_shaders/
+                    debug/
+                        mergeDebugShaders/
+                    debugAndroidTest/
+                        mergeDebugAndroidTestShaders/
+                merged_test_only_native_libs/
+                    debug/
+                        mergeDebugNativeLibs/
+                mixed_scope_dex_archive/
+                    debug/
+                        dexBuilderDebug/
+                    debugAndroidTest/
+                        dexBuilderDebugAndroidTest/
+                navigation_json/
+                    debug/
+                        extractDeepLinksDebug/
+                            navigation.json
+                nested_resources_validation_report/
+                    debug/
+                        generateDebugResources/
+                            nestedResourcesValidationReport.txt
+                    debugAndroidTest/
+                        generateDebugAndroidTestResources/
+                            nestedResourcesValidationReport.txt
+                packaged_manifests/
+                    debug/
+                        processDebugManifestForPackage/
+                            AndroidManifest.xml
+                            output-metadata.json
+                    debugAndroidTest/
+                        processDebugAndroidTestManifest/
+                            AndroidManifest.xml
+                            output-metadata.json
+                packaged_res/
+                    debug/
+                        packageDebugResources/
+                project_dex_archive/
+                    debug/
+                        dexBuilderDebug/
+                    debugAndroidTest/
+                        dexBuilderDebugAndroidTest/
+                runtime_symbol_list/
+                    debug/
+                        processDebugResources/
+                            R.txt
+                    debugAndroidTest/
+                        processDebugAndroidTestResources/
+                            R.txt
+                signing_config_versions/
+                    debug/
+                        writeDebugSigningConfigVersions/
+                            signing-config-versions.json
+                    debugAndroidTest/
+                        writeDebugAndroidTestSigningConfigVersions/
+                            signing-config-versions.json
+                source_set_path_map/
+                    debug/
+                        mapDebugSourceSetPaths/
+                            file-map.txt
+                    debugAndroidTest/
+                        mapDebugAndroidTestSourceSetPaths/
+                            file-map.txt
+                stable_resource_ids_file/
+                    debug/
+                        processDebugResources/
+                            stableIds.txt
+                    debugAndroidTest/
+                        processDebugAndroidTestResources/
+                            stableIds.txt
+                stripped_native_libs/
+                    debug/
+                        stripDebugDebugSymbols/
+                sub_project_dex_archive/
+                    debug/
+                        dexBuilderDebug/
+                    debugAndroidTest/
+                        dexBuilderDebugAndroidTest/
+                symbol_list_with_package_name/
+                    debug/
+                        processDebugResources/
+                            package-aware-r.txt
+                    debugAndroidTest/
+                        processDebugAndroidTestResources/
+                            package-aware-r.txt
+                tmp/
+                    manifest/
+                        androidTest/
+                validate_signing_config/
+                    debug/
+                        validateSigningDebug/
+                    debugAndroidTest/
+                        validateSigningDebugAndroidTest/
+            kotlin/
+                compileDebugAndroidTestKotlin/
+                    cacheable/
+                        last-build.bin
+                        caches-jvm/
+                    classpath-snapshot/
+                        shrunk-classpath-snapshot.bin
+                    local-state/
+                        build-history.bin
+                compileDebugKotlin/
+                    cacheable/
+                        last-build.bin
+                        caches-jvm/
+                    classpath-snapshot/
+                        shrunk-classpath-snapshot.bin
+                    local-state/
+                        build-history.bin
+                compileDebugUnitTestKotlin/
+                    cacheable/
+                        last-build.bin
+                        caches-jvm/
+                    classpath-snapshot/
+                        shrunk-classpath-snapshot.bin
+                    local-state/
+                        build-history.bin
+            outputs/
+                apk/
+                    androidTest/
+                        debug/
+                            app-debug-androidTest.apk
+                            output-metadata.json
+                    debug/
+                        app-debug.apk
+                        output-metadata.json
+                logs/
+                    manifest-merger-debug-report.txt
+            tmp/
+                kotlin-classes/
+                    debug/
+                        com/
+                        META-INF/
+                            app_debug.kotlin_module
+                    debugAndroidTest/
+                        com/
+                        META-INF/
+                            app_debugAndroidTest.kotlin_module
+                    debugUnitTest/
+                        com/
+                        META-INF/
+                            app_debugUnitTest.kotlin_module
+        sampledata/
+        src/
+            androidTest/
+                java/
+                    com/
+                        example/
+            main/
+                AndroidManifest.xml
+                ic_launch-playstore.png
+                ic_launcher-playstore.png
+                luanch_icon-playstore.png
+                assets/
+                    questions_full.json
+                java/
+                    com/
+                        example/
+                res/
+                    drawable/
+                        ic_launcher_background.xml
+                        ic_launcher_foreground.xml
+                        luanch_icon_foreground.xml
+                    font/
+                        msyh.ttf
+                    mipmap-anydpi/
+                    mipmap-anydpi-v26/
+                        ic_launch.xml
+                        ic_launcher.xml
+                        ic_launcher_round.xml
+                        ic_launch_round.xml
+                        luanch_icon.xml
+                        luanch_icon_round.xml
+                    mipmap-hdpi/
+                        ic_launch.webp
+                        ic_launcher.webp
+                        ic_launcher_background.webp
+                        ic_launcher_foreground.webp
+                        ic_launcher_round.webp
+                        ic_launch_foreground.webp
+                        ic_launch_round.webp
+                        luanch_icon.webp
+                        luanch_icon_foreground.webp
+                        luanch_icon_round.webp
+                    mipmap-mdpi/
+                        ic_launch.webp
+                        ic_launcher.webp
+                        ic_launcher_background.webp
+                        ic_launcher_foreground.webp
+                        ic_launcher_round.webp
+                        ic_launch_foreground.webp
+                        ic_launch_round.webp
+                        luanch_icon.webp
+                        luanch_icon_foreground.webp
+                        luanch_icon_round.webp
+                    mipmap-xhdpi/
+                        ic_launch.webp
+                        ic_launcher.webp
+                        ic_launcher_background.webp
+                        ic_launcher_foreground.webp
+                        ic_launcher_round.webp
+                        ic_launch_foreground.webp
+                        ic_launch_round.webp
+                        luanch_icon.webp
+                        luanch_icon_foreground.webp
+                        luanch_icon_round.webp
+                    mipmap-xxhdpi/
+                        ic_launch.webp
+                        ic_launcher.webp
+                        ic_launcher_background.webp
+                        ic_launcher_foreground.webp
+                        ic_launcher_round.webp
+                        ic_launch_foreground.webp
+                        ic_launch_round.webp
+                        luanch_icon.webp
+                        luanch_icon_foreground.webp
+                        luanch_icon_round.webp
+                    mipmap-xxxhdpi/
+                        ic_launch.webp
+                        ic_launcher.webp
+                        ic_launcher_background.webp
+                        ic_launcher_foreground.webp
+                        ic_launcher_round.webp
+                        ic_launch_foreground.webp
+                        ic_launch_round.webp
+                        luanch_icon.webp
+                        luanch_icon_foreground.webp
+                        luanch_icon_round.webp
+                    values/
+                        colors.xml
+                        ic_launcher_background.xml
+                        ic_launch_background.xml
+                        luanch_icon_background.xml
+                        strings.xml
+                        themes.xml
+                    xml/
+                        backup_rules.xml
+                        data_extraction_rules.xml
+                        provider_paths.xml
+            test/
+                java/
+                    com/
+                        example/
+    gradle/
+        libs.versions.toml
+        wrapper/
+            gradle-wrapper.jar
+            gradle-wrapper.properties
+
+
+
+===============================================================
+===============================================================
+===============================================================
+
+
+
+
+### FILE CONTENTS ###
+
+--- FILE: .\.gitignore ---
+```
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+
+```
+
+--- FILE: .\build.gradle.kts ---
+```kts
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+plugins {
+    alias(libs.plugins.android.application) apply false
+    alias(libs.plugins.kotlin.android) apply false
+    alias(libs.plugins.kotlin.compose) apply false
+}
+```
+
+--- FILE: .\gradle.properties ---
+```properties
+# Project-wide Gradle settings.
+# IDE (e.g. Android Studio) users:
+# Gradle settings configured through the IDE *will override*
+# any settings specified in this file.
+# For more details on how to configure your build environment visit
+# http://www.gradle.org/docs/current/userguide/build_environment.html
+# Specifies the JVM arguments used for the daemon process.
+# The setting is particularly useful for tweaking memory settings.
+org.gradle.jvmargs=-Xmx2048m -Dfile.encoding=UTF-8
+# When configured, Gradle will run in incubating parallel mode.
+# This option should only be used with decoupled projects. For more details, visit
+# https://developer.android.com/r/tools/gradle-multi-project-decoupled-projects
+# org.gradle.parallel=true
+# AndroidX package structure to make it clearer which packages are bundled with the
+# Android operating system, and which are packaged with your app's APK
+# https://developer.android.com/topic/libraries/support-library/androidx-rn
+android.useAndroidX=true
+# Kotlin code style for this project: "official" or "obsolete":
+kotlin.code.style=official
+# Enables namespacing of each library's R class so that its R class includes only the
+# resources declared in the library itself and none from the library's dependencies,
+# thereby reducing the size of the R class for that library
+android.nonTransitiveRClass=true
+```
+
+--- FILE: .\gradlew ---
+```
+#!/bin/sh
+
+#
+# Copyright © 2015 the original authors.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      https://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+##############################################################################
+#
+#   Gradle start up script for POSIX generated by Gradle.
+#
+#   Important for running:
+#
+#   (1) You need a POSIX-compliant shell to run this script. If your /bin/sh is
+#       noncompliant, but you have some other compliant shell such as ksh or
+#       bash, then to run this script, type that shell name before the whole
+#       command line, like:
+#
+#           ksh Gradle
+#
+#       Busybox and similar reduced shells will NOT work, because this script
+#       requires all of these POSIX shell features:
+#         * functions;
+#         * expansions «$var», «${var}», «${var:-default}», «${var+SET}»,
+#           «${var#prefix}», «${var%suffix}», and «$( cmd )»;
+#         * compound commands having a testable exit status, especially «case»;
+#         * various built-in commands including «command», «set», and «ulimit».
+#
+#   Important for patching:
+#
+#   (2) This script targets any POSIX shell, so it avoids extensions provided
+#       by Bash, Ksh, etc; in particular arrays are avoided.
+#
+#       The "traditional" practice of packing multiple parameters into a
+#       space-separated string is a well documented source of bugs and security
+#       problems, so this is (mostly) avoided, by progressively accumulating
+#       options in "$@", and eventually passing that to Java.
+#
+#       Where the inherited environment variables (DEFAULT_JVM_OPTS, JAVA_OPTS,
+#       and GRADLE_OPTS) rely on word-splitting, this is performed explicitly;
+#       see the in-line comments for details.
+#
+#       There are tweaks for specific operating systems such as AIX, CygWin,
+#       Darwin, MinGW, and NonStop.
+#
+#   (3) This script is generated from the Groovy template
+#       https://github.com/gradle/gradle/blob/HEAD/platforms/jvm/plugins-application/src/main/resources/org/gradle/api/internal/plugins/unixStartScript.txt
+#       within the Gradle project.
+#
+#       You can find Gradle at https://github.com/gradle/gradle/.
+#
+##############################################################################
+
+# Attempt to set APP_HOME
+
+# Resolve links: $0 may be a link
+app_path=$0
+
+# Need this for daisy-chained symlinks.
+while
+    APP_HOME=${app_path%"${app_path##*/}"}  # leaves a trailing /; empty if no leading path
+    [ -h "$app_path" ]
+do
+    ls=$( ls -ld "$app_path" )
+    link=${ls#*' -> '}
+    case $link in             #(
+      /*)   app_path=$link ;; #(
+      *)    app_path=$APP_HOME$link ;;
+    esac
+done
+
+# This is normally unused
+# shellcheck disable=SC2034
+APP_BASE_NAME=${0##*/}
+# Discard cd standard output in case $CDPATH is set (https://github.com/gradle/gradle/issues/25036)
+APP_HOME=$( cd -P "${APP_HOME:-./}" > /dev/null && printf '%s\n' "$PWD" ) || exit
+
+# Use the maximum available, or set MAX_FD != -1 to use that value.
+MAX_FD=maximum
+
+warn () {
+    echo "$*"
+} >&2
+
+die () {
+    echo
+    echo "$*"
+    echo
+    exit 1
+} >&2
+
+# OS specific support (must be 'true' or 'false').
+cygwin=false
+msys=false
+darwin=false
+nonstop=false
+case "$( uname )" in                #(
+  CYGWIN* )         cygwin=true  ;; #(
+  Darwin* )         darwin=true  ;; #(
+  MSYS* | MINGW* )  msys=true    ;; #(
+  NONSTOP* )        nonstop=true ;;
+esac
+
+CLASSPATH="\\\"\\\""
+
+
+# Determine the Java command to use to start the JVM.
+if [ -n "$JAVA_HOME" ] ; then
+    if [ -x "$JAVA_HOME/jre/sh/java" ] ; then
+        # IBM's JDK on AIX uses strange locations for the executables
+        JAVACMD=$JAVA_HOME/jre/sh/java
+    else
+        JAVACMD=$JAVA_HOME/bin/java
+    fi
+    if [ ! -x "$JAVACMD" ] ; then
+        die "ERROR: JAVA_HOME is set to an invalid directory: $JAVA_HOME
+
+Please set the JAVA_HOME variable in your environment to match the
+location of your Java installation."
+    fi
+else
+    JAVACMD=java
+    if ! command -v java >/dev/null 2>&1
+    then
+        die "ERROR: JAVA_HOME is not set and no 'java' command could be found in your PATH.
+
+Please set the JAVA_HOME variable in your environment to match the
+location of your Java installation."
+    fi
+fi
+
+# Increase the maximum file descriptors if we can.
+if ! "$cygwin" && ! "$darwin" && ! "$nonstop" ; then
+    case $MAX_FD in #(
+      max*)
+        # In POSIX sh, ulimit -H is undefined. That's why the result is checked to see if it worked.
+        # shellcheck disable=SC2039,SC3045
+        MAX_FD=$( ulimit -H -n ) ||
+            warn "Could not query maximum file descriptor limit"
+    esac
+    case $MAX_FD in  #(
+      '' | soft) :;; #(
+      *)
+        # In POSIX sh, ulimit -n is undefined. That's why the result is checked to see if it worked.
+        # shellcheck disable=SC2039,SC3045
+        ulimit -n "$MAX_FD" ||
+            warn "Could not set maximum file descriptor limit to $MAX_FD"
+    esac
+fi
+
+# Collect all arguments for the java command, stacking in reverse order:
+#   * args from the command line
+#   * the main class name
+#   * -classpath
+#   * -D...appname settings
+#   * --module-path (only if needed)
+#   * DEFAULT_JVM_OPTS, JAVA_OPTS, and GRADLE_OPTS environment variables.
+
+# For Cygwin or MSYS, switch paths to Windows format before running java
+if "$cygwin" || "$msys" ; then
+    APP_HOME=$( cygpath --path --mixed "$APP_HOME" )
+    CLASSPATH=$( cygpath --path --mixed "$CLASSPATH" )
+
+    JAVACMD=$( cygpath --unix "$JAVACMD" )
+
+    # Now convert the arguments - kludge to limit ourselves to /bin/sh
+    for arg do
+        if
+            case $arg in                                #(
+              -*)   false ;;                            # don't mess with options #(
+              /?*)  t=${arg#/} t=/${t%%/*}              # looks like a POSIX filepath
+                    [ -e "$t" ] ;;                      #(
+              *)    false ;;
+            esac
+        then
+            arg=$( cygpath --path --ignore --mixed "$arg" )
+        fi
+        # Roll the args list around exactly as many times as the number of
+        # args, so each arg winds up back in the position where it started, but
+        # possibly modified.
+        #
+        # NB: a `for` loop captures its iteration list before it begins, so
+        # changing the positional parameters here affects neither the number of
+        # iterations, nor the values presented in `arg`.
+        shift                   # remove old arg
+        set -- "$@" "$arg"      # push replacement arg
+    done
+fi
+
+
+# Add default JVM options here. You can also use JAVA_OPTS and GRADLE_OPTS to pass JVM options to this script.
+DEFAULT_JVM_OPTS='"-Xmx64m" "-Xms64m"'
+
+# Collect all arguments for the java command:
+#   * DEFAULT_JVM_OPTS, JAVA_OPTS, and optsEnvironmentVar are not allowed to contain shell fragments,
+#     and any embedded shellness will be escaped.
+#   * For example: A user cannot expect ${Hostname} to be expanded, as it is an environment variable and will be
+#     treated as '${Hostname}' itself on the command line.
+
+set -- \
+        "-Dorg.gradle.appname=$APP_BASE_NAME" \
+        -classpath "$CLASSPATH" \
+        -jar "$APP_HOME/gradle/wrapper/gradle-wrapper.jar" \
+        "$@"
+
+# Stop when "xargs" is not available.
+if ! command -v xargs >/dev/null 2>&1
+then
+    die "xargs is not available"
+fi
+
+# Use "xargs" to parse quoted args.
+#
+# With -n1 it outputs one arg per line, with the quotes and backslashes removed.
+#
+# In Bash we could simply go:
+#
+#   readarray ARGS < <( xargs -n1 <<<"$var" ) &&
+#   set -- "${ARGS[@]}" "$@"
+#
+# but POSIX shell has neither arrays nor command substitution, so instead we
+# post-process each arg (as a line of input to sed) to backslash-escape any
+# character that might be a shell metacharacter, then use eval to reverse
+# that process (while maintaining the separation between arguments), and wrap
+# the whole thing up as a single "set" statement.
+#
+# This will of course break if any of these variables contains a newline or
+# an unmatched quote.
+#
+
+eval "set -- $(
+        printf '%s\n' "$DEFAULT_JVM_OPTS $JAVA_OPTS $GRADLE_OPTS" |
+        xargs -n1 |
+        sed ' s~[^-[:alnum:]+,./:=@_]~\\&~g; ' |
+        tr '\n' ' '
+    )" '"$@"'
+
+exec "$JAVACMD" "$@"
+
+```
+
+--- FILE: .\gradlew.bat ---
+```bat
+@rem
+@rem Copyright 2015 the original author or authors.
+@rem
+@rem Licensed under the Apache License, Version 2.0 (the "License");
+@rem you may not use this file except in compliance with the License.
+@rem You may obtain a copy of the License at
+@rem
+@rem      https://www.apache.org/licenses/LICENSE-2.0
+@rem
+@rem Unless required by applicable law or agreed to in writing, software
+@rem distributed under the License is distributed on an "AS IS" BASIS,
+@rem WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+@rem See the License for the specific language governing permissions and
+@rem limitations under the License.
+@rem
+@rem SPDX-License-Identifier: Apache-2.0
+@rem
+
+@if "%DEBUG%"=="" @echo off
+@rem ##########################################################################
+@rem
+@rem  Gradle startup script for Windows
+@rem
+@rem ##########################################################################
+
+@rem Set local scope for the variables with windows NT shell
+if "%OS%"=="Windows_NT" setlocal
+
+set DIRNAME=%~dp0
+if "%DIRNAME%"=="" set DIRNAME=.
+@rem This is normally unused
+set APP_BASE_NAME=%~n0
+set APP_HOME=%DIRNAME%
+
+@rem Resolve any "." and ".." in APP_HOME to make it shorter.
+for %%i in ("%APP_HOME%") do set APP_HOME=%%~fi
+
+@rem Add default JVM options here. You can also use JAVA_OPTS and GRADLE_OPTS to pass JVM options to this script.
+set DEFAULT_JVM_OPTS="-Xmx64m" "-Xms64m"
+
+@rem Find java.exe
+if defined JAVA_HOME goto findJavaFromJavaHome
+
+set JAVA_EXE=java.exe
+%JAVA_EXE% -version >NUL 2>&1
+if %ERRORLEVEL% equ 0 goto execute
+
+echo. 1>&2
+echo ERROR: JAVA_HOME is not set and no 'java' command could be found in your PATH. 1>&2
+echo. 1>&2
+echo Please set the JAVA_HOME variable in your environment to match the 1>&2
+echo location of your Java installation. 1>&2
+
+goto fail
+
+:findJavaFromJavaHome
+set JAVA_HOME=%JAVA_HOME:"=%
+set JAVA_EXE=%JAVA_HOME%/bin/java.exe
+
+if exist "%JAVA_EXE%" goto execute
+
+echo. 1>&2
+echo ERROR: JAVA_HOME is set to an invalid directory: %JAVA_HOME% 1>&2
+echo. 1>&2
+echo Please set the JAVA_HOME variable in your environment to match the 1>&2
+echo location of your Java installation. 1>&2
+
+goto fail
+
+:execute
+@rem Setup the command line
+
+set CLASSPATH=
+
+
+@rem Execute Gradle
+"%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %GRADLE_OPTS% "-Dorg.gradle.appname=%APP_BASE_NAME%" -classpath "%CLASSPATH%" -jar "%APP_HOME%\gradle\wrapper\gradle-wrapper.jar" %*
+
+:end
+@rem End local scope for the variables with windows NT shell
+if %ERRORLEVEL% equ 0 goto mainEnd
+
+:fail
+rem Set variable GRADLE_EXIT_CONSOLE if you need the _script_ return code instead of
+rem the _cmd.exe /c_ return code!
+set EXIT_CODE=%ERRORLEVEL%
+if %EXIT_CODE% equ 0 set EXIT_CODE=1
+if not ""=="%GRADLE_EXIT_CONSOLE%" exit %EXIT_CODE%
+exit /b %EXIT_CODE%
+
+:mainEnd
+if "%OS%"=="Windows_NT" endlocal
+
+:omega
+
+```
+
+--- FILE: .\local.properties ---
+```properties
+## This file is automatically generated by Android Studio.
+# Do not modify this file -- YOUR CHANGES WILL BE ERASED!
+#
+# This file should *NOT* be checked into Version Control Systems,
+# as it contains information specific to your local configuration.
+#
+# Location of the SDK. This is only used by Gradle.
+# For customization when using a Version Control System, please read the
+# header note.
+sdk.dir=C\:\\Users\\86132\\AppData\\Local\\Android\\Sdk
+```
+
+--- FILE: .\settings.gradle.kts ---
+```kts
+pluginManagement {
+    repositories {
+        // 1. 优先使用阿里云镜像 (下载插件快)
+        maven { url = uri("https://maven.aliyun.com/repository/public") }
+        maven { url = uri("https://maven.aliyun.com/repository/google") }
+        maven { url = uri("https://maven.aliyun.com/repository/gradle-plugin") }
+
+        // 2. 原版配置作为备用
+        google {
+            content {
+                includeGroupByRegex("com\\.android.*")
+                includeGroupByRegex("com\\.google.*")
+                includeGroupByRegex("androidx.*")
+            }
+        }
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        // 1. 优先使用阿里云镜像 (下载依赖快)
+        maven { url = uri("https://maven.aliyun.com/repository/public") }
+        maven { url = uri("https://maven.aliyun.com/repository/google") }
+
+        // 2. 原版配置作为备用
+        google()
+        mavenCentral()
+    }
+}
+
+rootProject.name = "My Application"
+include(":app")
+```
+
+--- FILE: .\.gradle\config.properties ---
+```properties
+#Sat Nov 29 17:00:42 CST 2025
+java.home=D\:\\Android Studio\\jbr
+
+```
+
+--- FILE: .\.gradle\file-system.probe (could not read) ---
+Error: 'utf-8' codec can't decode byte 0x9a in position 3: invalid start byte
+
+--- FILE: .\.gradle\8.13\gc.properties ---
+```properties
+
+```
+
+--- FILE: .\.gradle\8.13\checksums\checksums.lock (could not read) ---
+Error: 'utf-8' codec can't decode byte 0xcb in position 1: invalid continuation byte
+
+--- FILE: .\.gradle\8.13\checksums\md5-checksums.bin (could not read) ---
+Error: 'utf-8' codec can't decode byte 0xff in position 5: invalid start byte
+
+--- FILE: .\.gradle\8.13\checksums\sha1-checksums.bin (could not read) ---
+Error: 'utf-8' codec can't decode byte 0xff in position 5: invalid start byte
+
+--- FILE: .\.gradle\8.13\executionHistory\executionHistory.bin (could not read) ---
+Error: 'utf-8' codec can't decode byte 0xff in position 5: invalid start byte
+
+--- FILE: .\.gradle\8.13\executionHistory\executionHistory.lock (could not read) ---
+Error: 'utf-8' codec can't decode byte 0xb8 in position 3: invalid start byte
+
+--- FILE: .\.gradle\8.13\fileChanges\last-build.bin ---
+```bin
+ 
+```
+
+--- FILE: .\.gradle\8.13\fileHashes\fileHashes.bin (could not read) ---
+Error: 'utf-8' codec can't decode byte 0xff in position 5: invalid start byte
+
+--- FILE: .\.gradle\8.13\fileHashes\fileHashes.lock (could not read) ---
+Error: 'utf-8' codec can't decode byte 0xfc in position 2: invalid start byte
+
+--- FILE: .\.gradle\8.13\fileHashes\resourceHashesCache.bin (could not read) ---
+Error: 'utf-8' codec can't decode byte 0xff in position 5: invalid start byte
+
+--- FILE: .\.gradle\buildOutputCleanup\buildOutputCleanup.lock (could not read) ---
+Error: 'utf-8' codec can't decode byte 0xc5 in position 2: invalid continuation byte
+
+--- FILE: .\.gradle\buildOutputCleanup\cache.properties ---
+```properties
+#Sat Nov 29 17:00:48 CST 2025
+gradle.version=8.13
+
+```
+
+--- FILE: .\.gradle\buildOutputCleanup\outputFiles.bin (could not read) ---
+Error: 'utf-8' codec can't decode byte 0xff in position 5: invalid start byte
+
+--- FILE: .\.gradle\vcs-1\gc.properties ---
+```properties
+
+```
+
+--- FILE: .\.idea\.gitignore ---
+```
+# Default ignored files
+/shelf/
+/workspace.xml
+
+```
+
+--- FILE: .\.idea\.name ---
+```
+My Application
+```
+
+--- FILE: .\.idea\AndroidProjectSystem.xml ---
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidProjectSystem">
+    <option name="providerId" value="com.android.tools.idea.GradleProjectSystem" />
+  </component>
+</project>
+```
+
+--- FILE: .\.idea\assetWizardSettings.xml ---
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WizardSettings">
+    <option name="children">
+      <map>
+        <entry key="imageWizard">
+          <value>
+            <PersistentState>
+              <option name="children">
+                <map>
+                  <entry key="imageAssetPanel">
+                    <value>
+                      <PersistentState>
+                        <option name="children">
+                          <map>
+                            <entry key="actionbar">
+                              <value>
+                                <PersistentState>
+                                  <option name="children">
+                                    <map>
+                                      <entry key="clipArt">
+                                        <value>
+                                          <PersistentState>
+                                            <option name="values">
+                                              <map>
+                                                <entry key="color" value="000000" />
+                                                <entry key="imagePath" value="C:\Users\86132\AppData\Local\Temp\ic_android_black_24dp.xml" />
+                                              </map>
+                                            </option>
+                                          </PersistentState>
+                                        </value>
+                                      </entry>
+                                      <entry key="text">
+                                        <value>
+                                          <PersistentState>
+                                            <option name="values">
+                                              <map>
+                                                <entry key="color" value="000000" />
+                                              </map>
+                                            </option>
+                                          </PersistentState>
+                                        </value>
+                                      </entry>
+                                      <entry key="textAsset">
+                                        <value>
+                                          <PersistentState>
+                                            <option name="values">
+                                              <map>
+                                                <entry key="color" value="000000" />
+                                              </map>
+                                            </option>
+                                          </PersistentState>
+                                        </value>
+                                      </entry>
+                                    </map>
+                                  </option>
+                                </PersistentState>
+                              </value>
+                            </entry>
+                            <entry key="launcher">
+                              <value>
+                                <PersistentState>
+                                  <option name="children">
+                                    <map>
+                                      <entry key="backgroundImage">
+                                        <value>
+                                          <PersistentState>
+                                            <option name="values">
+                                              <map>
+                                                <entry key="imagePath" value="D:\Download\Chrome Download" />
+                                                <entry key="scalingPercent" value="48" />
+                                              </map>
+                                            </option>
+                                          </PersistentState>
+                                        </value>
+                                      </entry>
+                                      <entry key="foregroundClipArt">
+                                        <value>
+                                          <PersistentState>
+                                            <option name="values">
+                                              <map>
+                                                <entry key="color" value="000000" />
+                                                <entry key="imagePath" value="C:\Users\86132\AppData\Local\Temp\ic_android_black_24dp.xml" />
+                                                <entry key="trimmed" value="true" />
+                                              </map>
+                                            </option>
+                                          </PersistentState>
+                                        </value>
+                                      </entry>
+                                      <entry key="foregroundImage">
+                                        <value>
+                                          <PersistentState>
+                                            <option name="values">
+                                              <map>
+                                                <entry key="color" value="000000" />
+                                                <entry key="imagePath" value="D:\Download\Chrome Download\Gemini_Generated_Image_9538039538039538.png" />
+                                                <entry key="scalingPercent" value="86" />
+                                              </map>
+                                            </option>
+                                          </PersistentState>
+                                        </value>
+                                      </entry>
+                                      <entry key="foregroundText">
+                                        <value>
+                                          <PersistentState>
+                                            <option name="values">
+                                              <map>
+                                                <entry key="color" value="000000" />
+                                              </map>
+                                            </option>
+                                          </PersistentState>
+                                        </value>
+                                      </entry>
+                                      <entry key="foregroundTextAsset">
+                                        <value>
+                                          <PersistentState>
+                                            <option name="values">
+                                              <map>
+                                                <entry key="color" value="000000" />
+                                              </map>
+                                            </option>
+                                          </PersistentState>
+                                        </value>
+                                      </entry>
+                                    </map>
+                                  </option>
+                                  <option name="values">
+                                    <map>
+                                      <entry key="backgroundAssetType" value="COLOR" />
+                                      <entry key="backgroundColor" value="ffffff" />
+                                      <entry key="legacyIconShape" value="NONE" />
+                                      <entry key="previewDensity" value="mdpi" />
+                                      <entry key="showSafeZone" value="false" />
+                                    </map>
+                                  </option>
+                                </PersistentState>
+                              </value>
+                            </entry>
+                            <entry key="launcherLegacy">
+                              <value>
+                                <PersistentState>
+                                  <option name="children">
+                                    <map>
+                                      <entry key="clipArt">
+                                        <value>
+                                          <PersistentState>
+                                            <option name="values">
+                                              <map>
+                                                <entry key="color" value="000000" />
+                                                <entry key="imagePath" value="C:\Users\86132\AppData\Local\Temp\ic_android_black_24dp.xml" />
+                                              </map>
+                                            </option>
+                                          </PersistentState>
+                                        </value>
+                                      </entry>
+                                      <entry key="text">
+                                        <value>
+                                          <PersistentState>
+                                            <option name="values">
+                                              <map>
+                                                <entry key="color" value="000000" />
+                                              </map>
+                                            </option>
+                                          </PersistentState>
+                                        </value>
+                                      </entry>
+                                      <entry key="textAsset">
+                                        <value>
+                                          <PersistentState>
+                                            <option name="values">
+                                              <map>
+                                                <entry key="color" value="000000" />
+                                              </map>
+                                            </option>
+                                          </PersistentState>
+                                        </value>
+                                      </entry>
+                                    </map>
+                                  </option>
+                                </PersistentState>
+                              </value>
+                            </entry>
+                            <entry key="notification">
+                              <value>
+                                <PersistentState>
+                                  <option name="children">
+                                    <map>
+                                      <entry key="clipArt">
+                                        <value>
+                                          <PersistentState>
+                                            <option name="values">
+                                              <map>
+                                                <entry key="color" value="000000" />
+                                                <entry key="imagePath" value="C:\Users\86132\AppData\Local\Temp\ic_android_black_24dp.xml" />
+                                              </map>
+                                            </option>
+                                          </PersistentState>
+                                        </value>
+                                      </entry>
+                                      <entry key="text">
+                                        <value>
+                                          <PersistentState>
+                                            <option name="values">
+                                              <map>
+                                                <entry key="color" value="000000" />
+                                              </map>
+                                            </option>
+                                          </PersistentState>
+                                        </value>
+                                      </entry>
+                                      <entry key="textAsset">
+                                        <value>
+                                          <PersistentState>
+                                            <option name="values">
+                                              <map>
+                                                <entry key="color" value="000000" />
+                                              </map>
+                                            </option>
+                                          </PersistentState>
+                                        </value>
+                                      </entry>
+                                    </map>
+                                  </option>
+                                </PersistentState>
+                              </value>
+                            </entry>
+                            <entry key="tvBanner">
+                              <value>
+                                <PersistentState>
+                                  <option name="children">
+                                    <map>
+                                      <entry key="foregroundText">
+                                        <value>
+                                          <PersistentState>
+                                            <option name="values">
+                                              <map>
+                                                <entry key="color" value="000000" />
+                                              </map>
+                                            </option>
+                                          </PersistentState>
+                                        </value>
+                                      </entry>
+                                    </map>
+                                  </option>
+                                </PersistentState>
+                              </value>
+                            </entry>
+                            <entry key="tvChannel">
+                              <value>
+                                <PersistentState>
+                                  <option name="children">
+                                    <map>
+                                      <entry key="foregroundClipArt">
+                                        <value>
+                                          <PersistentState>
+                                            <option name="values">
+                                              <map>
+                                                <entry key="imagePath" value="C:\Users\86132\AppData\Local\Temp\ic_android_black_24dp.xml" />
+                                              </map>
+                                            </option>
+                                          </PersistentState>
+                                        </value>
+                                      </entry>
+                                      <entry key="foregroundImage">
+                                        <value>
+                                          <PersistentState>
+                                            <option name="values">
+                                              <map>
+                                                <entry key="color" value="000000" />
+                                              </map>
+                                            </option>
+                                          </PersistentState>
+                                        </value>
+                                      </entry>
+                                      <entry key="foregroundText">
+                                        <value>
+                                          <PersistentState>
+                                            <option name="values">
+                                              <map>
+                                                <entry key="color" value="000000" />
+                                              </map>
+                                            </option>
+                                          </PersistentState>
+                                        </value>
+                                      </entry>
+                                      <entry key="foregroundTextAsset">
+                                        <value>
+                                          <PersistentState>
+                                            <option name="values">
+                                              <map>
+                                                <entry key="color" value="000000" />
+                                              </map>
+                                            </option>
+                                          </PersistentState>
+                                        </value>
+                                      </entry>
+                                    </map>
+                                  </option>
+                                  <option name="values">
+                                    <map>
+                                      <entry key="previewDensity" value="mdpi" />
+                                      <entry key="showSafeZone" value="false" />
+                                    </map>
+                                  </option>
+                                </PersistentState>
+                              </value>
+                            </entry>
+                          </map>
+                        </option>
+                      </PersistentState>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </PersistentState>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
+```
+
+--- FILE: .\.idea\compiler.xml ---
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel target="21" />
+  </component>
+</project>
+```
+
+--- FILE: .\.idea\deploymentTargetSelector.xml ---
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="deploymentTargetSelector">
+    <selectionStates>
+      <SelectionState runConfigName="APP">
+        <option name="selectionMode" value="DROPDOWN" />
+      </SelectionState>
+    </selectionStates>
+  </component>
+</project>
+```
+
+--- FILE: .\.idea\deviceManager.xml ---
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DeviceTable">
+    <option name="columnSorters">
+      <list>
+        <ColumnSorterState>
+          <option name="column" value="Name" />
+          <option name="order" value="ASCENDING" />
+        </ColumnSorterState>
+      </list>
+    </option>
+  </component>
+</project>
+```
+
+--- FILE: .\.idea\gradle.xml ---
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="testRunner" value="CHOOSE_PER_TEST" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleJvm" value="#GRADLE_LOCAL_JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/app" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>
+```
+
+--- FILE: .\.idea\MarsCodeWorkspaceAppSettings.xml ---
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="com.codeverse.userSettings.MarscodeWorkspaceAppSettingsState">
+    <option name="ckgOperationStatus" value="SUCCESS" />
+    <option name="progress" value="0.5483871" />
+  </component>
+</project>
+```
+
+--- FILE: .\.idea\migrations.xml ---
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectMigrations">
+    <option name="MigrateToGradleLocalJavaHome">
+      <set>
+        <option value="$PROJECT_DIR$" />
+      </set>
+    </option>
+  </component>
+</project>
+```
+
+--- FILE: .\.idea\misc.xml ---
+```xml
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_21" default="true" project-jdk-name="jbr-21" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
+```
+
+--- FILE: .\.idea\modules.xml ---
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/My_Application.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/My_Application.app.main.iml" />
+    </modules>
+  </component>
+</project>
+```
+
+--- FILE: .\.idea\runConfigurations.xml ---
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="RunConfigurationProducerService">
+    <option name="ignoredProducers">
+      <set>
+        <option value="com.intellij.execution.junit.AbstractAllInDirectoryConfigurationProducer" />
+        <option value="com.intellij.execution.junit.AllInPackageConfigurationProducer" />
+        <option value="com.intellij.execution.junit.PatternConfigurationProducer" />
+        <option value="com.intellij.execution.junit.TestInClassConfigurationProducer" />
+        <option value="com.intellij.execution.junit.UniqueIdConfigurationProducer" />
+        <option value="com.intellij.execution.junit.testDiscovery.JUnitTestDiscoveryConfigurationProducer" />
+        <option value="org.jetbrains.kotlin.idea.junit.KotlinJUnitRunConfigurationProducer" />
+        <option value="org.jetbrains.kotlin.idea.junit.KotlinPatternConfigurationProducer" />
+      </set>
+    </option>
+  </component>
+</project>
+```
+
+--- FILE: .\.idea\workspace.xml ---
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+    <layouts>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_launcher_background.xml">
+        <config>
+          <theme>@style/Theme.MyApplication</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_launcher_foreground.xml">
+        <config>
+          <theme>@style/Theme.MyApplication</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml">
+        <config>
+          <theme>@style/Theme.MyApplication</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml">
+        <config>
+          <theme>@style/Theme.MyApplication</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/xml/provider_paths.xml">
+        <config>
+          <theme>@style/Theme.MyApplication</theme>
+        </config>
+      </layout>
+    </layouts>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c8979f37-dea0-45be-a6b0-e7c8b3ed80e5" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=LocalEmulator, isTemplate=false, identifier=path=C:\Users\86132\.android\avd\Medium_Phone.avd)]" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="My Application" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="resourceFile" />
+        <option value="Kotlin File" />
+      </list>
+    </option>
+  </component>
+  <component name="GradleScriptDefinitionsStorage" workingDir="$PROJECT_DIR$" gradleHome="C:\Users\86132\.gradle\wrapper\dists\gradle-8.13-bin\5xuhj0ry160q40clulazy9h7d\gradle-8.13" javaHome="D:\Android Studio\jbr" gradleVersion="8.13" />
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="3697GaU832n2d40iCf9Ks9P3H7n" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Android App.APP.executor": "Run",
+    "Android App.app.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "com.google.services.firebase.aqiPopupShown": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/Android Programe/app/src/main/res/font",
+    "memory.settings.postsync.last.time.stamp": "1764928858865",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.17",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "com.android.studio.ml.bot.mainConfigurable"
+  }
+}]]></component>
+  <component name="PsdUISettings">
+    <option name="MODULE_TAB" value="Default Config" />
+    <option name="LAST_EDITED_SIGNING_CONFIG" value="debug" />
+    <option name="LAST_EDITED_BUILD_TYPE" value="release" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Android Programe\app\src\main\res\font" />
+      <recent name="D:\Android Programe\app\src\main\assets" />
+      <recent name="D:\Android Programe\app\src\main\res" />
+      <recent name="D:\Android Programe\app\src\main" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="APP" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="My_Application.app" />
+      <option name="ANDROID_RUN_CONFIGURATION_SCHEMA_VERSION" value="1" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="ALLOW_ASSUME_VERIFIED" value="false" />
+      <option name="CLEAR_APP_STORAGE" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="RESTORE_ENABLED" value="false" />
+      <option name="RESTORE_FILE" value="" />
+      <option name="RESTORE_FRESH_INSTALL_ONLY" value="false" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Hybrid>
+      <Java>
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Java>
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Java/Kotlin Method Sample (legacy)" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY" value="" />
+      <option name="ACTIVITY_CLASS" value="com.example.myapplication.MainActivity" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c8979f37-dea0-45be-a6b0-e7c8b3ed80e5" name="Changes" comment="" />
+      <created>1764406839410</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1764406839410</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="play_dynamic_filters_status">
+    <option name="appIdToCheckInfo">
+      <map>
+        <entry key="com.example.myapplication">
+          <value>
+            <CheckInfo lastCheckTimestamp="1765109362607" />
+          </value>
+        </entry>
+        <entry key="com.example.myapplication.test">
+          <value>
+            <CheckInfo lastCheckTimestamp="1765109362607" />
+          </value>
+        </entry>
+        <entry key="com.shuati.shanghanlun.test">
+          <value>
+            <CheckInfo lastCheckTimestamp="1765118472272" />
+          </value>
+        </entry>
+        <entry />
+        <entry key="com.shuati.shanghanlun">
+          <value>
+            <CheckInfo lastCheckTimestamp="1765202225650" />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
+```
+
+--- FILE: .\.idea\codeStyles\codeStyleConfig.xml ---
+```xml
+<component name="ProjectCodeStyleConfiguration">
+  <state>
+    <option name="USE_PER_PROJECT_SETTINGS" value="true" />
+  </state>
+</component>
+```
+
+--- FILE: .\.idea\codeStyles\Project.xml ---
+```xml
+<component name="ProjectCodeStyleConfiguration">
+  <code_scheme name="Project" version="173">
+    <JetCodeStyleSettings>
+      <option name="CODE_STYLE_DEFAULTS" value="KOTLIN_OFFICIAL" />
+    </JetCodeStyleSettings>
+    <codeStyleSettings language="XML">
+      <option name="FORCE_REARRANGE_MODE" value="1" />
+      <indentOptions>
+        <option name="CONTINUATION_INDENT_SIZE" value="4" />
+      </indentOptions>
+      <arrangement>
+        <rules>
+          <section>
+            <rule>
+              <match>
+                <AND>
+                  <NAME>xmlns:android</NAME>
+                  <XML_ATTRIBUTE />
+                  <XML_NAMESPACE>^$</XML_NAMESPACE>
+                </AND>
+              </match>
+            </rule>
+          </section>
+          <section>
+            <rule>
+              <match>
+                <AND>
+                  <NAME>xmlns:.*</NAME>
+                  <XML_ATTRIBUTE />
+                  <XML_NAMESPACE>^$</XML_NAMESPACE>
+                </AND>
+              </match>
+              <order>BY_NAME</order>
+            </rule>
+          </section>
+          <section>
+            <rule>
+              <match>
+                <AND>
+                  <NAME>.*:id</NAME>
+                  <XML_ATTRIBUTE />
+                  <XML_NAMESPACE>http://schemas.android.com/apk/res/android</XML_NAMESPACE>
+                </AND>
+              </match>
+            </rule>
+          </section>
+          <section>
+            <rule>
+              <match>
+                <AND>
+                  <NAME>.*:name</NAME>
+                  <XML_ATTRIBUTE />
+                  <XML_NAMESPACE>http://schemas.android.com/apk/res/android</XML_NAMESPACE>
+                </AND>
+              </match>
+            </rule>
+          </section>
+          <section>
+            <rule>
+              <match>
+                <AND>
+                  <NAME>name</NAME>
+                  <XML_ATTRIBUTE />
+                  <XML_NAMESPACE>^$</XML_NAMESPACE>
+                </AND>
+              </match>
+            </rule>
+          </section>
+          <section>
+            <rule>
+              <match>
+                <AND>
+                  <NAME>style</NAME>
+                  <XML_ATTRIBUTE />
+                  <XML_NAMESPACE>^$</XML_NAMESPACE>
+                </AND>
+              </match>
+            </rule>
+          </section>
+          <section>
+            <rule>
+              <match>
+                <AND>
+                  <NAME>.*</NAME>
+                  <XML_ATTRIBUTE />
+                  <XML_NAMESPACE>^$</XML_NAMESPACE>
+                </AND>
+              </match>
+              <order>BY_NAME</order>
+            </rule>
+          </section>
+          <section>
+            <rule>
+              <match>
+                <AND>
+                  <NAME>.*</NAME>
+                  <XML_ATTRIBUTE />
+                  <XML_NAMESPACE>http://schemas.android.com/apk/res/android</XML_NAMESPACE>
+                </AND>
+              </match>
+              <order>ANDROID_ATTRIBUTE_ORDER</order>
+            </rule>
+          </section>
+          <section>
+            <rule>
+              <match>
+                <AND>
+                  <NAME>.*</NAME>
+                  <XML_ATTRIBUTE />
+                  <XML_NAMESPACE>.*</XML_NAMESPACE>
+                </AND>
+              </match>
+              <order>BY_NAME</order>
+            </rule>
+          </section>
+        </rules>
+      </arrangement>
+    </codeStyleSettings>
+    <codeStyleSettings language="kotlin">
+      <option name="CODE_STYLE_DEFAULTS" value="KOTLIN_OFFICIAL" />
+    </codeStyleSettings>
+  </code_scheme>
+</component>
+```
+
+--- FILE: .\.idea\inspectionProfiles\Project_Default.xml ---
+```xml
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="ComposePreviewDimensionRespectsLimit" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="composableFile" value="true" />
+    </inspection_tool>
+    <inspection_tool class="ComposePreviewMustBeTopLevelFunction" enabled="true" level="ERROR" enabled_by_default="true">
+      <option name="composableFile" value="true" />
+    </inspection_tool>
+    <inspection_tool class="ComposePreviewNeedsComposableAnnotation" enabled="true" level="ERROR" enabled_by_default="true">
+      <option name="composableFile" value="true" />
+    </inspection_tool>
+    <inspection_tool class="ComposePreviewNotSupportedInUnitTestFiles" enabled="true" level="ERROR" enabled_by_default="true">
+      <option name="composableFile" value="true" />
+    </inspection_tool>
+    <inspection_tool class="GlancePreviewDimensionRespectsLimit" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="composableFile" value="true" />
+    </inspection_tool>
+    <inspection_tool class="GlancePreviewMustBeTopLevelFunction" enabled="true" level="ERROR" enabled_by_default="true">
+      <option name="composableFile" value="true" />
+    </inspection_tool>
+    <inspection_tool class="GlancePreviewNeedsComposableAnnotation" enabled="true" level="ERROR" enabled_by_default="true">
+      <option name="composableFile" value="true" />
+    </inspection_tool>
+    <inspection_tool class="GlancePreviewNotSupportedInUnitTestFiles" enabled="true" level="ERROR" enabled_by_default="true">
+      <option name="composableFile" value="true" />
+    </inspection_tool>
+    <inspection_tool class="PreviewAnnotationInFunctionWithParameters" enabled="true" level="ERROR" enabled_by_default="true">
+      <option name="composableFile" value="true" />
+    </inspection_tool>
+    <inspection_tool class="PreviewApiLevelMustBeValid" enabled="true" level="ERROR" enabled_by_default="true">
+      <option name="composableFile" value="true" />
+    </inspection_tool>
+    <inspection_tool class="PreviewDeviceShouldUseNewSpec" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="composableFile" value="true" />
+    </inspection_tool>
+    <inspection_tool class="PreviewFontScaleMustBeGreaterThanZero" enabled="true" level="ERROR" enabled_by_default="true">
+      <option name="composableFile" value="true" />
+    </inspection_tool>
+    <inspection_tool class="PreviewMultipleParameterProviders" enabled="true" level="ERROR" enabled_by_default="true">
+      <option name="composableFile" value="true" />
+    </inspection_tool>
+    <inspection_tool class="PreviewParameterProviderOnFirstParameter" enabled="true" level="ERROR" enabled_by_default="true">
+      <option name="composableFile" value="true" />
+    </inspection_tool>
+    <inspection_tool class="PreviewPickerAnnotation" enabled="true" level="ERROR" enabled_by_default="true">
+      <option name="composableFile" value="true" />
+    </inspection_tool>
+  </profile>
+</component>
+```
+
+--- FILE: .\.idea\modules\app\My_Application.app.main.iml ---
+```iml
+<?xml version="1.0" encoding="UTF-8"?>
+<module version="4">
+  <component name="AdditionalModuleElements">
+    <content url="file://$MODULE_DIR$/../../../app/src/main" dumb="true">
+      <sourceFolder url="file://$MODULE_DIR$/../../../app/src/main/assets" type="java-resource" />
+    </content>
+  </component>
+</module>
+```
+
+--- FILE: .\app\.gitignore ---
+```
+/build
+```
+
+--- FILE: .\app\build.gradle.kts ---
+```kts
+plugins {
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.kotlin.compose)
+}
+
+android {
+    namespace = "com.example.killquestion"
+    compileSdk = 35
+
+    defaultConfig {
+        applicationId = "com.shuati.shanghanlun"
+        minSdk = 26
+        targetSdk = 35
+        versionCode = 3
+        versionName = "3.12"
+
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        signingConfig = signingConfigs.getByName("debug")
+    }
+
+    buildTypes {
+        release {
+            isMinifyEnabled = false
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
+        }
+    }
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
+    }
+    kotlinOptions {
+        jvmTarget = "11"
+    }
+    buildFeatures {
+        compose = true
+    }
+}
+
+dependencies {
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.lifecycle.runtime.ktx)
+    implementation(libs.androidx.activity.compose)
+    implementation(platform(libs.androidx.compose.bom))
+    implementation(libs.androidx.compose.ui)
+    implementation(libs.androidx.compose.ui.graphics)
+    implementation(libs.androidx.compose.ui.tooling.preview)
+    implementation(libs.androidx.compose.material3)
+    implementation(libs.androidx.compose.foundation)
+    implementation(libs.androidx.compose.material.icons.extended)
+    implementation(libs.google.gson)
+    implementation("com.google.code.gson:gson:2.10.1")
+    implementation(libs.androidx.ui.graphics)
+    implementation(libs.androidx.appcompat)
+    implementation("io.coil-kt:coil-compose:2.5.0") // 或者是最新版本
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.androidx.espresso.core)
+    androidTestImplementation(platform(libs.androidx.compose.bom))
+    androidTestImplementation(libs.androidx.compose.ui.test.junit4)
+    debugImplementation(libs.androidx.compose.ui.tooling)
+    debugImplementation(libs.androidx.compose.ui.test.manifest)
+
+}
+
+```
+
+--- FILE: .\app\proguard-rules.pro ---
+```pro
+# Add project specific ProGuard rules here.
+# You can control the set of applied configuration files using the
+# proguardFiles setting in build.gradle.
+#
+# For more details, see
+#   http://developer.android.com/guide/developing/tools/proguard.html
+
+# If your project uses WebView with JS, uncomment the following
+# and specify the fully qualified class name to the JavaScript interface
+# class:
+#-keepclassmembers class fqcn.of.javascript.interface.for.webview {
+#   public *;
+#}
+
+# Uncomment this to preserve the line number information for
+# debugging stack traces.
+#-keepattributes SourceFile,LineNumberTable
+
+# If you keep the line number information, uncomment this to
+# hide the original source file name.
+#-renamesourcefileattribute SourceFile
+```
+
+--- FILE: .\app\build\intermediates\annotation_processor_list\debug\javaPreCompileDebug\annotationProcessors.json ---
+```json
+{}
+```
+
+--- FILE: .\app\build\intermediates\annotation_processor_list\debugAndroidTest\javaPreCompileDebugAndroidTest\annotationProcessors.json ---
+```json
+{}
+```
+
+--- FILE: .\app\build\intermediates\annotation_processor_list\debugUnitTest\javaPreCompileDebugUnitTest\annotationProcessors.json ---
+```json
+{}
+```
+
+--- FILE: .\app\build\intermediates\apk_ide_redirect_file\debug\createDebugApkListingFileRedirect\redirect.txt ---
+```txt
+#- File Locator -
+listingFile=../../../../outputs/apk/debug/output-metadata.json
+
+```
+
+--- FILE: .\app\build\intermediates\apk_ide_redirect_file\debugAndroidTest\createDebugAndroidTestApkListingFileRedirect\redirect.txt ---
+```txt
+#- File Locator -
+listingFile=../../../../outputs/apk/androidTest/debug/output-metadata.json
+
+```
+
+--- FILE: .\app\build\intermediates\app_metadata\debug\writeDebugAppMetadata\app-metadata.properties ---
+```properties
+appMetadataVersion=1.1
+androidGradlePluginVersion=8.13.1
+
+```
+
+
+--- FILE: .\app\src\main\res\drawable\ic_launcher_background.xml ---
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+  <group android:scaleX="0"
+      android:scaleY="0"
+      android:translateX="54"
+      android:translateY="54">
+      <path android:fillColor="#3DDC84"
+            android:pathData="M0,0h108v108h-108z"/>
+      <path android:fillColor="#00000000" android:pathData="M9,0L9,108"
+            android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
+      <path android:fillColor="#00000000" android:pathData="M19,0L19,108"
+            android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
+      <path android:fillColor="#00000000" android:pathData="M29,0L29,108"
+            android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
+      <path android:fillColor="#00000000" android:pathData="M39,0L39,108"
+            android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
+      <path android:fillColor="#00000000" android:pathData="M49,0L49,108"
+            android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
+      <path android:fillColor="#00000000" android:pathData="M59,0L59,108"
+            android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
+      <path android:fillColor="#00000000" android:pathData="M69,0L69,108"
+            android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
+      <path android:fillColor="#00000000" android:pathData="M79,0L79,108"
+            android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
+      <path android:fillColor="#00000000" android:pathData="M89,0L89,108"
+            android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
+      <path android:fillColor="#00000000" android:pathData="M99,0L99,108"
+            android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
+      <path android:fillColor="#00000000" android:pathData="M0,9L108,9"
+            android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
+      <path android:fillColor="#00000000" android:pathData="M0,19L108,19"
+            android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
+      <path android:fillColor="#00000000" android:pathData="M0,29L108,29"
+            android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
+      <path android:fillColor="#00000000" android:pathData="M0,39L108,39"
+            android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
+      <path android:fillColor="#00000000" android:pathData="M0,49L108,49"
+            android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
+      <path android:fillColor="#00000000" android:pathData="M0,59L108,59"
+            android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
+      <path android:fillColor="#00000000" android:pathData="M0,69L108,69"
+            android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
+      <path android:fillColor="#00000000" android:pathData="M0,79L108,79"
+            android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
+      <path android:fillColor="#00000000" android:pathData="M0,89L108,89"
+            android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
+      <path android:fillColor="#00000000" android:pathData="M0,99L108,99"
+            android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
+      <path android:fillColor="#00000000" android:pathData="M19,29L89,29"
+            android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
+      <path android:fillColor="#00000000" android:pathData="M19,39L89,39"
+            android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
+      <path android:fillColor="#00000000" android:pathData="M19,49L89,49"
+            android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
+      <path android:fillColor="#00000000" android:pathData="M19,59L89,59"
+            android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
+      <path android:fillColor="#00000000" android:pathData="M19,69L89,69"
+            android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
+      <path android:fillColor="#00000000" android:pathData="M19,79L89,79"
+            android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
+      <path android:fillColor="#00000000" android:pathData="M29,19L29,89"
+            android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
+      <path android:fillColor="#00000000" android:pathData="M39,19L39,89"
+            android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
+      <path android:fillColor="#00000000" android:pathData="M49,19L49,89"
+            android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
+      <path android:fillColor="#00000000" android:pathData="M59,19L59,89"
+            android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
+      <path android:fillColor="#00000000" android:pathData="M69,19L69,89"
+            android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
+      <path android:fillColor="#00000000" android:pathData="M79,19L79,89"
+            android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
+  </group>
+</vector>
+
+```
+
+--- FILE: .\app\src\main\res\drawable\ic_launcher_foreground.xml ---
+```xml
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path android:pathData="M31,63.928c0,0 6.4,-11 12.1,-13.1c7.2,-2.6 26,-1.4 26,-1.4l38.1,38.1L107,108.928l-32,-1L31,63.928z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:endX="85.84757"
+                android:endY="92.4963"
+                android:startX="42.9492"
+                android:startY="49.59793"
+                android:type="linear">
+                <item
+                    android:color="#44000000"
+                    android:offset="0.0" />
+                <item
+                    android:color="#00000000"
+                    android:offset="1.0" />
+            </gradient>
+        </aapt:attr>
+    </path>
+    <path
+        android:fillColor="#FFFFFF"
+        android:fillType="nonZero"
+        android:pathData="M65.3,45.828l3.8,-6.6c0.2,-0.4 0.1,-0.9 -0.3,-1.1c-0.4,-0.2 -0.9,-0.1 -1.1,0.3l-3.9,6.7c-6.3,-2.8 -13.4,-2.8 -19.7,0l-3.9,-6.7c-0.2,-0.4 -0.7,-0.5 -1.1,-0.3C38.8,38.328 38.7,38.828 38.9,39.228l3.8,6.6C36.2,49.428 31.7,56.028 31,63.928h46C76.3,56.028 71.8,49.428 65.3,45.828zM43.4,57.328c-0.8,0 -1.5,-0.5 -1.8,-1.2c-0.3,-0.7 -0.1,-1.5 0.4,-2.1c0.5,-0.5 1.4,-0.7 2.1,-0.4c0.7,0.3 1.2,1 1.2,1.8C45.3,56.528 44.5,57.328 43.4,57.328L43.4,57.328zM64.6,57.328c-0.8,0 -1.5,-0.5 -1.8,-1.2s-0.1,-1.5 0.4,-2.1c0.5,-0.5 1.4,-0.7 2.1,-0.4c0.7,0.3 1.2,1 1.2,1.8C66.5,56.528 65.6,57.328 64.6,57.328L64.6,57.328z"
+        android:strokeWidth="1"
+        android:strokeColor="#00000000" />
+</vector>
+```
+
+--- FILE: .\app\src\main\res\drawable\luanch_icon_foreground.xml ---
+```xml
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="1024"
+    android:viewportHeight="1024">
+  <group android:scaleX="0.62857145"
+      android:scaleY="0.62857145"
+      android:translateX="190.17143"
+      android:translateY="184.21164">
+    <path
+        android:pathData="M892.9,316v447.5H338.4V167.7h394.7z"
+        android:fillColor="#FCE3C3"/>
+    <path
+        android:pathData="M892.9,775.5L338.4,775.5l-12,-12L326.4,167.7l12,-12h394.7l8.2,3.2 159.9,148.3 3.8,8.8v447.5l-12,12zM350.4,751.5h530.5v-430.3L728.3,179.7L350.4,179.7v571.9z"
+        android:fillColor="#300604"/>
+    <path
+        android:pathData="M733.1,167.7v148.3h159.9z"
+        android:fillColor="#ED8F27"/>
+    <path
+        android:pathData="M892.9,328h-159.9l-12,-12L721.1,167.7l20.2,-8.8 159.9,148.3 -8.2,20.8zM745.1,304h117.3L745.1,195.2v108.8z"
+        android:fillColor="#300604"/>
+    <path
+        android:pathData="M206.2,186.9c0,21 17,38.1 38.1,38.1h31.7,-31.7c-21,0 -38.1,17 -38.1,38.1v31.7,-31.7c0,-21 -17,-38.1 -38.1,-38.1h-31.7,31.7c21,-0 38.1,-17 38.1,-38.1v-31.7,31.7z"
+        android:fillColor="#ED8F27"/>
+    <path
+        android:pathData="M219.2,294.7h-25.9v-31.7c0,-13.9 -11.3,-25.1 -25.1,-25.1h-31.7L136.5,212h31.7c13.9,0 25.1,-11.3 25.1,-25.1v-31.7h25.9v31.7c0,13.9 11.3,25.1 25.1,25.1v25.9c-13.8,0 -25.1,11.3 -25.1,25.1v31.7zM202.1,224.9a50.9,50.9 0,0 1,4.1 4.1,49.2 49.2,0 0,1 4.1,-4.1 49.2,49.2 0,0 1,-4.1 -4.1,50.7 50.7,0 0,1 -4.1,4.1zM276,237.9h-31.7L244.3,212h31.7v25.9z"
+        android:fillColor="#ED8F27"/>
+    <path
+        android:pathData="M447.3,387.9l-28.2,-12 74.5,-175.7 74,175.7 -28.3,11.9 -45.8,-108.9z"
+        android:fillColor="#B12800"/>
+    <path
+        android:pathData="M454.3,315.7h75.7v30.7h-75.7z"
+        android:fillColor="#B12800"/>
+    <path
+        android:pathData="M568.2,671.4h-13.4c-13.7,-68.1 -73.7,-118 -144.5,-118 -77.5,0 -141.2,60.1 -147,136.2h-67.1c-43.9,0 -79.6,35.7 -79.6,79.6 0,43.9 35.7,79.6 79.6,79.6h372c48.9,0 88.7,-39.8 88.7,-88.7 0,-48.9 -39.8,-88.7 -88.7,-88.7z"
+        android:fillColor="#300604"/>
+    <path
+        android:pathData="M568.2,820.2H196.2c-28.1,0 -51,-22.9 -51,-51 0,-28.2 22.9,-51.1 51,-51.1h81l14.7,-0.9 -0.5,-16.4c0,-65.6 53.3,-118.9 118.9,-118.9 60.5,0 111.3,45.3 118.1,105.4l1.4,12.7h38.3c33.2,0 60.1,27 60.1,60.1 0,33.2 -27,60.1 -60.1,60.1z"
+        android:fillColor="#228E9D"/>
+    <path
+        android:pathData="M503.4,701.8h-28.5c0,-36.2 -29.4,-65.6 -65.6,-65.6v-28.5c51.9,0 94.1,42.2 94.1,94.1zM215.7,554.5h28.5v67.3h-28.5zM154,454.9h28.5v119.8h-28.5zM154,593h28.5v37.2h-28.5zM154,652h28.5v21.9h-28.5zM215.7,347h28.5v128.8h-28.5zM542.9,448.1h30.7v46.4L542.9,494.5zM402.4,445h30.7v43.6h-30.7zM478,467.4h30.7v21.8h-30.7zM438.6,864.2L565.6,864.2v28.5L438.6,892.7zM693.6,425.1h136.5v30.7L693.6,455.7zM693.6,492.9h136.5v30.7L693.6,523.6zM693.6,590.7h136.5v30.7L693.6,621.4zM693.6,658.5h136.5v30.7L693.6,689.2zM675.2,797h88.9v28.5h-88.9z"
+        android:fillColor="#300604"/>
+    <path
+        android:pathData="M152,334.1c0,7.8 6.3,14.1 14.1,14.1h11.7,-11.7c-7.8,0 -14.1,6.3 -14.1,14.1v11.7,-11.7c0,-7.8 -6.3,-14.1 -14.1,-14.1h-11.7,11.7c7.8,-0 14.1,-6.3 14.1,-14.1v-11.7,11.7z"
+        android:fillColor="#ED8F27"/>
+    <path
+        android:pathData="M157,373.9h-9.9v-11.7c0,-5 -4.1,-9.1 -9.1,-9.1h-11.7v-9.9h11.7c5,0 9.1,-4.1 9.1,-9.1v-11.7h9.9v11.7c0,5 4.1,9.1 9.1,9.1v9.9c-5,0 -9.1,4.1 -9.1,9.1v11.7zM150.8,348.1c0.4,0.4 0.9,0.8 1.3,1.3 0.4,-0.4 0.8,-0.9 1.3,-1.3 -0.4,-0.4 -0.9,-0.8 -1.3,-1.3 -0.4,0.4 -0.8,0.9 -1.3,1.3zM177.8,353.1h-11.7v-9.9h11.7v9.9z"
+        android:fillColor="#ED8F27"/>
+  </group>
+</vector>
+
+```
+
+--- FILE: .\app\src\main\res\font\msyh.ttf (could not read) ---
+Error: 'utf-8' codec can't decode byte 0x9c in position 19: invalid start byte
+
+--- FILE: .\app\src\main\res\mipmap-anydpi-v26\ic_launch.xml ---
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+    <background android:drawable="@color/ic_launch_background"/>
+    <foreground android:drawable="@mipmap/ic_launch_foreground"/>
+</adaptive-icon>
+```
+
+--- FILE: .\app\src\main\res\mipmap-anydpi-v26\ic_launcher.xml ---
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+    <background android:drawable="@color/ic_launcher_background"/>
+    <foreground android:drawable="@mipmap/ic_launcher_foreground"/>
+</adaptive-icon>
+```
+
+--- FILE: .\app\src\main\res\mipmap-anydpi-v26\ic_launcher_round.xml ---
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+    <background android:drawable="@color/ic_launcher_background"/>
+    <foreground android:drawable="@mipmap/ic_launcher_foreground"/>
+</adaptive-icon>
+```
+
+--- FILE: .\app\src\main\res\mipmap-anydpi-v26\ic_launch_round.xml ---
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+    <background android:drawable="@color/ic_launch_background"/>
+    <foreground android:drawable="@mipmap/ic_launch_foreground"/>
+</adaptive-icon>
+```
+
+--- FILE: .\app\src\main\res\mipmap-anydpi-v26\luanch_icon.xml ---
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+    <background android:drawable="@color/luanch_icon_background"/>
+    <foreground android:drawable="@mipmap/luanch_icon_foreground"/>
+</adaptive-icon>
+```
+
+--- FILE: .\app\src\main\res\mipmap-anydpi-v26\luanch_icon_round.xml ---
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+    <background android:drawable="@color/luanch_icon_background"/>
+    <foreground android:drawable="@mipmap/luanch_icon_foreground"/>
+</adaptive-icon>
+```
+
+--- FILE: .\app\src\main\res\mipmap-hdpi\ic_launch.webp (could not read) ---
+Error: 'utf-8' codec can't decode byte 0xc0 in position 22: invalid start byte
+
+--- FILE: .\app\src\main\res\mipmap-hdpi\ic_launcher.webp (could not read) ---
+Error: 'utf-8' codec can't decode byte 0xc0 in position 22: invalid start byte
+
+--- FILE: .\app\src\main\res\mipmap-hdpi\ic_launcher_background.webp (could not read) ---
+Error: 'utf-8' codec can't decode byte 0xa1 in position 21: invalid start byte
+
+--- FILE: .\app\src\main\res\mipmap-hdpi\ic_launcher_foreground.webp (could not read) ---
+Error: 'utf-8' codec can't decode byte 0xa1 in position 21: invalid start byte
+
+--- FILE: .\app\src\main\res\mipmap-hdpi\ic_launcher_round.webp (could not read) ---
+Error: 'utf-8' codec can't decode byte 0x8e in position 4: invalid start byte
+
+--- FILE: .\app\src\main\res\mipmap-hdpi\ic_launch_foreground.webp (could not read) ---
+Error: 'utf-8' codec can't decode byte 0xa1 in position 21: invalid start byte
+
+--- FILE: .\app\src\main\res\mipmap-hdpi\ic_launch_round.webp (could not read) ---
+Error: 'utf-8' codec can't decode byte 0x8e in position 4: invalid start byte
+
+--- FILE: .\app\src\main\res\mipmap-hdpi\luanch_icon.webp (could not read) ---
+Error: 'utf-8' codec can't decode byte 0xc0 in position 22: invalid start byte
+
+--- FILE: .\app\src\main\res\mipmap-hdpi\luanch_icon_foreground.webp (could not read) ---
+Error: 'utf-8' codec can't decode byte 0xa1 in position 21: invalid start byte
+
+--- FILE: .\app\src\main\res\mipmap-hdpi\luanch_icon_round.webp (could not read) ---
+Error: 'utf-8' codec can't decode byte 0x8e in position 4: invalid start byte
+
+--- FILE: .\app\src\main\res\mipmap-mdpi\ic_launch.webp (could not read) ---
+Error: 'utf-8' codec can't decode byte 0xf8 in position 16: invalid start byte
+
+--- FILE: .\app\src\main\res\mipmap-mdpi\ic_launcher.webp (could not read) ---
+Error: 'utf-8' codec can't decode byte 0xf8 in position 16: invalid start byte
+
+--- FILE: .\app\src\main\res\mipmap-mdpi\ic_launcher_background.webp (could not read) ---
+Error: 'utf-8' codec can't decode byte 0xc0 in position 22: invalid start byte
+
+--- FILE: .\app\src\main\res\mipmap-mdpi\ic_launcher_foreground.webp (could not read) ---
+Error: 'utf-8' codec can't decode byte 0x8c in position 4: invalid start byte
+
+--- FILE: .\app\src\main\res\mipmap-mdpi\ic_launcher_round.webp (could not read) ---
+Error: 'utf-8' codec can't decode byte 0xe6 in position 4: invalid continuation byte
+
+--- FILE: .\app\src\main\res\mipmap-mdpi\ic_launch_foreground.webp (could not read) ---
+Error: 'utf-8' codec can't decode byte 0x8c in position 4: invalid start byte
+
+--- FILE: .\app\src\main\res\mipmap-mdpi\ic_launch_round.webp (could not read) ---
+Error: 'utf-8' codec can't decode byte 0xe6 in position 4: invalid continuation byte
+
+--- FILE: .\app\src\main\res\mipmap-mdpi\luanch_icon.webp (could not read) ---
+Error: 'utf-8' codec can't decode byte 0xf8 in position 16: invalid start byte
+
+--- FILE: .\app\src\main\res\mipmap-mdpi\luanch_icon_foreground.webp (could not read) ---
+Error: 'utf-8' codec can't decode byte 0x8c in position 4: invalid start byte
+
+--- FILE: .\app\src\main\res\mipmap-mdpi\luanch_icon_round.webp (could not read) ---
+Error: 'utf-8' codec can't decode byte 0xe6 in position 4: invalid continuation byte
+
+--- FILE: .\app\src\main\res\mipmap-xhdpi\ic_launch.webp (could not read) ---
+Error: 'utf-8' codec can't decode byte 0xc0 in position 22: invalid start byte
+
+--- FILE: .\app\src\main\res\mipmap-xhdpi\ic_launcher.webp (could not read) ---
+Error: 'utf-8' codec can't decode byte 0xc0 in position 22: invalid start byte
+
+--- FILE: .\app\src\main\res\mipmap-xhdpi\ic_launcher_background.webp (could not read) ---
+Error: 'utf-8' codec can't decode byte 0xd7 in position 21: invalid continuation byte
+
+--- FILE: .\app\src\main\res\mipmap-xhdpi\ic_launcher_foreground.webp (could not read) ---
+Error: 'utf-8' codec can't decode byte 0xd7 in position 21: invalid continuation byte
+
+--- FILE: .\app\src\main\res\mipmap-xhdpi\ic_launcher_round.webp (could not read) ---
+Error: 'utf-8' codec can't decode byte 0xc0 in position 22: invalid start byte
+
+--- FILE: .\app\src\main\res\mipmap-xhdpi\ic_launch_foreground.webp (could not read) ---
+Error: 'utf-8' codec can't decode byte 0xd7 in position 21: invalid continuation byte
+
+--- FILE: .\app\src\main\res\mipmap-xhdpi\ic_launch_round.webp (could not read) ---
+Error: 'utf-8' codec can't decode byte 0xc0 in position 22: invalid start byte
+
+--- FILE: .\app\src\main\res\mipmap-xhdpi\luanch_icon.webp (could not read) ---
+Error: 'utf-8' codec can't decode byte 0xc0 in position 22: invalid start byte
+
+--- FILE: .\app\src\main\res\mipmap-xhdpi\luanch_icon_foreground.webp (could not read) ---
+Error: 'utf-8' codec can't decode byte 0xd7 in position 21: invalid continuation byte
+
+--- FILE: .\app\src\main\res\mipmap-xhdpi\luanch_icon_round.webp (could not read) ---
+Error: 'utf-8' codec can't decode byte 0xc0 in position 22: invalid start byte
+
+--- FILE: .\app\src\main\res\mipmap-xxhdpi\ic_launch.webp (could not read) ---
+Error: 'utf-8' codec can't decode byte 0x8f in position 21: invalid start byte
+
+--- FILE: .\app\src\main\res\mipmap-xxhdpi\ic_launcher.webp (could not read) ---
+Error: 'utf-8' codec can't decode byte 0x8f in position 21: invalid start byte
+
+--- FILE: .\app\src\main\res\mipmap-xxhdpi\ic_launcher_background.webp (could not read) ---
+Error: 'utf-8' codec can't decode byte 0xc1 in position 22: invalid start byte
+
+--- FILE: .\app\src\main\res\mipmap-xxhdpi\ic_launcher_foreground.webp (could not read) ---
+Error: 'utf-8' codec can't decode byte 0xe4 in position 4: invalid continuation byte
+
+--- FILE: .\app\src\main\res\mipmap-xxhdpi\ic_launcher_round.webp (could not read) ---
+Error: 'utf-8' codec can't decode byte 0x8f in position 21: invalid start byte
+
+--- FILE: .\app\src\main\res\mipmap-xxhdpi\ic_launch_foreground.webp (could not read) ---
+Error: 'utf-8' codec can't decode byte 0xe4 in position 4: invalid continuation byte
+
+--- FILE: .\app\src\main\res\mipmap-xxhdpi\ic_launch_round.webp (could not read) ---
+Error: 'utf-8' codec can't decode byte 0x8f in position 21: invalid start byte
+
+--- FILE: .\app\src\main\res\mipmap-xxhdpi\luanch_icon.webp (could not read) ---
+Error: 'utf-8' codec can't decode byte 0x8f in position 21: invalid start byte
+
+--- FILE: .\app\src\main\res\mipmap-xxhdpi\luanch_icon_foreground.webp (could not read) ---
+Error: 'utf-8' codec can't decode byte 0xe4 in position 4: invalid continuation byte
+
+--- FILE: .\app\src\main\res\mipmap-xxhdpi\luanch_icon_round.webp (could not read) ---
+Error: 'utf-8' codec can't decode byte 0x8f in position 21: invalid start byte
+
+--- FILE: .\app\src\main\res\mipmap-xxxhdpi\ic_launch.webp (could not read) ---
+Error: 'utf-8' codec can't decode byte 0x8c in position 4: invalid start byte
+
+--- FILE: .\app\src\main\res\mipmap-xxxhdpi\ic_launcher.webp (could not read) ---
+Error: 'utf-8' codec can't decode byte 0x8c in position 4: invalid start byte
+
+--- FILE: .\app\src\main\res\mipmap-xxxhdpi\ic_launcher_background.webp (could not read) ---
+Error: 'utf-8' codec can't decode byte 0x80 in position 4: invalid start byte
+
+--- FILE: .\app\src\main\res\mipmap-xxxhdpi\ic_launcher_foreground.webp (could not read) ---
+Error: 'utf-8' codec can't decode byte 0xfa in position 4: invalid start byte
+
+--- FILE: .\app\src\main\res\mipmap-xxxhdpi\ic_launcher_round.webp (could not read) ---
+Error: 'utf-8' codec can't decode byte 0xf8 in position 4: invalid start byte
+
+--- FILE: .\app\src\main\res\mipmap-xxxhdpi\ic_launch_foreground.webp (could not read) ---
+Error: 'utf-8' codec can't decode byte 0xfa in position 4: invalid start byte
+
+--- FILE: .\app\src\main\res\mipmap-xxxhdpi\ic_launch_round.webp (could not read) ---
+Error: 'utf-8' codec can't decode byte 0xf8 in position 4: invalid start byte
+
+--- FILE: .\app\src\main\res\mipmap-xxxhdpi\luanch_icon.webp (could not read) ---
+Error: 'utf-8' codec can't decode byte 0x8c in position 4: invalid start byte
+
+--- FILE: .\app\src\main\res\mipmap-xxxhdpi\luanch_icon_foreground.webp (could not read) ---
+Error: 'utf-8' codec can't decode byte 0xfa in position 4: invalid start byte
+
+--- FILE: .\app\src\main\res\mipmap-xxxhdpi\luanch_icon_round.webp (could not read) ---
+Error: 'utf-8' codec can't decode byte 0xf8 in position 4: invalid start byte
+
+--- FILE: .\app\src\main\res\values\colors.xml ---
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>
+```
+
+--- FILE: .\app\src\main\res\values\ic_launcher_background.xml ---
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ic_launcher_background">#FFFFFF</color>
+</resources>
+```
+
+--- FILE: .\app\src\main\res\values\ic_launch_background.xml ---
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ic_launch_background">#FFFFFF</color>
+</resources>
+```
+
+--- FILE: .\app\src\main\res\values\luanch_icon_background.xml ---
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="luanch_icon_background">#FFFFFF</color>
+</resources>
+```
+
+--- FILE: .\app\src\main\res\values\strings.xml ---
+```xml
+<resources>
+    <string name="app_name">伤寒论刷题</string>
+</resources>
+```
+
+--- FILE: .\app\src\main\res\values\themes.xml ---
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.MyApplication" parent="android:Theme.Material.Light.NoActionBar" />
+</resources>
+```
+
+--- FILE: .\app\src\main\res\xml\backup_rules.xml ---
+```xml
+<?xml version="1.0" encoding="utf-8"?><!--
+   Sample backup rules file; uncomment and customize as necessary.
+   See https://developer.android.com/guide/topics/data/autobackup
+   for details.
+   Note: This file is ignored for devices older than API 31
+   See https://developer.android.com/about/versions/12/backup-restore
+-->
+<full-backup-content>
+    <!--
+   <include domain="sharedpref" path="."/>
+   <exclude domain="sharedpref" path="device.xml"/>
+-->
+</full-backup-content>
+```
+
+--- FILE: .\app\src\main\res\xml\data_extraction_rules.xml ---
+```xml
+<?xml version="1.0" encoding="utf-8"?><!--
+   Sample data extraction rules file; uncomment and customize as necessary.
+   See https://developer.android.com/about/versions/12/backup-restore#xml-changes
+   for details.
+-->
+<data-extraction-rules>
+    <cloud-backup>
+        <!-- TODO: Use <include> and <exclude> to control what is backed up.
+        <include .../>
+        <exclude .../>
+        -->
+    </cloud-backup>
+    <!--
+    <device-transfer>
+        <include .../>
+        <exclude .../>
+    </device-transfer>
+    -->
+</data-extraction-rules>
+```
+
+--- FILE: .\app\src\main\res\xml\provider_paths.xml ---
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <cache-path name="shared_files" path="." />
+</paths>
+```
+
+--- FILE: .\gradle\libs.versions.toml ---
+```toml
+[versions]
+agp = "8.13.1"
+kotlin = "2.0.21"
+coreKtx = "1.10.1"
+junit = "4.13.2"
+junitVersion = "1.1.5"
+espressoCore = "3.5.1"
+lifecycleRuntimeKtx = "2.6.1"
+activityCompose = "1.8.0"
+composeBom = "2024.09.00"
+foundation = "1.9.5"
+gson = "2.10.1"
+uiGraphics = "1.10.0"
+appcompat = "1.7.1"
+
+[libraries]
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
+androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
+androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
+androidx-compose-ui = { group = "androidx.compose.ui", name = "ui" }
+androidx-compose-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
+androidx-compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+androidx-compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+androidx-compose-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
+androidx-compose-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
+androidx-compose-material3 = { group = "androidx.compose.material3", name = "material3" }
+androidx-compose-foundation = { group = "androidx.compose.foundation", name = "foundation", version.ref = "foundation" }
+androidx-compose-material-icons-extended = { group = "androidx.compose.material", name = "material-icons-extended" }
+google-gson = { group = "com.google.code.gson", name = "gson", version.ref = "gson" }
+androidx-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics", version.ref = "uiGraphics" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+
+```
+
+--- FILE: .\gradle\wrapper\gradle-wrapper.jar (could not read) ---
+Error: 'utf-8' codec can't decode byte 0xdd in position 55: invalid continuation byte
+
+--- FILE: .\gradle\wrapper\gradle-wrapper.properties ---
+```properties
+#Sat Nov 29 17:00:40 CST 2025
+distributionBase=GRADLE_USER_HOME
+distributionPath=wrapper/dists
+distributionUrl=https\://services.gradle.org/distributions/gradle-8.13-bin.zip
+networkTimeout=10000
+validateDistributionUrl=true
+zipStoreBase=GRADLE_USER_HOME
+zipStorePath=wrapper/dists
+
+```
