@@ -1,21 +1,13 @@
-# Add project specific ProGuard rules here.
-# You can control the set of applied configuration files using the
-# proguardFiles setting in build.gradle.
-#
-# For more details, see
-#   http://developer.android.com/guide/developing/tools/proguard.html
+# 1. 保护你的数据类不被改名/移除 (最强保护)
+-keep class com.example.killquestion.data.model.** { *; }
 
-# If your project uses WebView with JS, uncomment the following
-# and specify the fully qualified class name to the JavaScript interface
-# class:
-#-keepclassmembers class fqcn.of.javascript.interface.for.webview {
-#   public *;
-#}
+# 2. 必须保留泛型签名 (解决 TypeToken 报错的关键)
+# 否则 List<Question> 会变成 List<Object>，导致 Gson 崩溃
+-keepattributes Signature
+-keepattributes *Annotation*
 
-# Uncomment this to preserve the line number information for
-# debugging stack traces.
-#-keepattributes SourceFile,LineNumberTable
+# 3. 忽略 Unsafe 警告 (防止编译报错)
+-dontwarn sun.misc.Unsafe
 
-# If you keep the line number information, uncomment this to
-# hide the original source file name.
-#-renamesourcefileattribute SourceFile
+# 4. 保留 Gson 自身
+-keep class com.google.gson.** { *; }

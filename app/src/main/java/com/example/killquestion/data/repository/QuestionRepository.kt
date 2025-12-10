@@ -30,26 +30,35 @@ object QuestionRepository {
         if (isLoaded) return
 
         try {
-            // 1. 加载 assets 里的静态题库
-            val jsonString = context.assets.open("questions_full.json").bufferedReader().use { it.readText() }
-            val wrapper = Gson().fromJson(jsonString, QuestionWrapper::class.java)
-            val staticQuestions = wrapper.data
+            // [修改] 显式声明变量类型，确保不被错误推断
+            val jsonString: String = context.assets.open("questions_full.json").bufferedReader().use {
+                it.readText()
+            }
 
-            // 2. 加载本地存储的动态题库 (联网搜的题)
-            val customQuestions = CustomQuestionStorage.getAll()
+            // [修改] 显式声明 wrapper 类型
+            val wrapper: QuestionWrapper? = Gson().fromJson(jsonString, QuestionWrapper::class.java)
 
-            // 3. 合并
-            allQuestions.clear()
-            allQuestions.addAll(staticQuestions)
-            allQuestions.addAll(customQuestions)
+            // [安全检查] 避免 wrapper 为空导致空指针
+            if (wrapper != null) {
+                val staticQuestions: List<Question> = wrapper.data
 
-            // 4. 重建索引
-            refreshIndexes()
+                // 2. 加载本地存储的动态题库
+                val customQuestions: List<Question> = CustomQuestionStorage.getAll()
 
-            isLoaded = true
-        } catch (e: IOException) {
-            loadError = "未找到题库文件 (questions_full.json)。"
-        } catch (e: Exception) {
+                // 3. 合并
+                allQuestions.clear()
+                allQuestions.addAll(staticQuestions)
+                allQuestions.addAll(customQuestions)
+
+                // 4. 重建索引
+                refreshIndexes()
+
+                isLoaded = true
+            } else {
+                loadError = "题库解析结果为空"
+            }
+        } catch (e: Exception) { // 捕获所有异常
+            e.printStackTrace()
             loadError = "数据解析错误: ${e.message}"
         }
     }

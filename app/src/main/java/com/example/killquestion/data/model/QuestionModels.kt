@@ -7,30 +7,34 @@ import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.Face
 import androidx.compose.material.icons.filled.ThumbUp
 import androidx.compose.ui.graphics.vector.ImageVector
+import com.google.gson.annotations.SerializedName
 
+// [核心修改] 给所有字段加上 = "" 或 = 0 的默认值
+// 这样编译后会生成无参构造函数，防止 R8 混淆导致 Gson 无法初始化
 data class QuestionWrapper(
-    val version: String,
-    val source: String,
-    val total_count: Int,
-    val data: List<Question>
+    @SerializedName("version") val version: String = "1.0",
+    @SerializedName("source") val source: String = "",
+    @SerializedName("total_count") val total_count: Int = 0,
+    @SerializedName("data") val data: List<Question> = emptyList()
 )
 
 data class Option(
-    val label: String,
-    val text: String
+    @SerializedName("label") val label: String = "",
+    @SerializedName("text") val text: String = ""
 )
 
 data class Question(
-    val id: String,
-    val number: Int,
-    val chapter: String,
-    val category: String,
-    val type: String,
-    val content: String,
-    val options: List<Option> = emptyList(),
-    val answer: String,
-    val analysis: String
+    @SerializedName("id") val id: String = "",
+    @SerializedName("number") val number: Int = 0,
+    @SerializedName("chapter") val chapter: String = "",
+    @SerializedName("category") val category: String = "",
+    @SerializedName("type") val type: String = "ESSAY",
+    @SerializedName("content") val content: String = "",
+    @SerializedName("options") val options: List<Option> = emptyList(),
+    @SerializedName("answer") val answer: String = "",
+    @SerializedName("analysis") val analysis: String = ""
 ) {
+    // ... 下面的逻辑方法保持不变 ...
     fun getUiType(): QuestionType {
         return try {
             QuestionType.valueOf(type)
@@ -39,7 +43,9 @@ data class Question(
         }
     }
 
+    // ... getRealAnswer 和 getFullExplanation 方法保持不变 ...
     fun getRealAnswer(): String {
+        // ... 原有逻辑 ...
         val typeEnum = getUiType()
         if (typeEnum == QuestionType.TRUE_FALSE) {
             if (answer.contains("正确") && !answer.contains("不正确")) return "A"
@@ -55,6 +61,7 @@ data class Question(
     }
 
     fun getFullExplanation(): String {
+        // ... 原有逻辑 ...
         if (getUiType() == QuestionType.TRUE_FALSE) {
             var cleanAns = answer.replace(Regex("答案|参考答案|正确答案|：|:"), "")
             cleanAns = cleanAns.replace(Regex("不正确|正确|错误|对|错|A|B|T|F|TRUE|FALSE", RegexOption.IGNORE_CASE), "")
@@ -65,7 +72,7 @@ data class Question(
         return analysis.ifBlank { "暂无详细解析" }
     }
 }
-
+// ... Enum 和 QuizContext 保持不变 ...
 enum class QuestionType(val icon: ImageVector) {
     SINGLE_CHOICE(Icons.Default.CheckCircle),
     MULTI_CHOICE(Icons.AutoMirrored.Filled.List),
@@ -75,8 +82,8 @@ enum class QuestionType(val icon: ImageVector) {
 }
 
 data class QuizContext(
-    val title: String,
-    val questions: List<Question>,
+    val title: String = "",
+    val questions: List<Question> = emptyList(),
     val isMistakeMode: Boolean = false,
     val sourceScreen: String = "START"
 )
