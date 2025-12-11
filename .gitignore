@@ -67,3 +67,7 @@ FactoryOutput/
 .DS_Store
 Thumbs.db
 ehthumbs.db
+
+CodePack.py
+CodePackage.txt
+app_factory.py

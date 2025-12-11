@@ -1,13 +1,11 @@
 package com.shuati.shanghanlun.data.local
 
-import android.R
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.content.Context
 import android.content.SharedPreferences
 import android.graphics.Typeface
 import android.os.Build
-import android.widget.Toast
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
@@ -24,13 +22,11 @@ import java.net.HttpURLConnection
 import java.net.URL
 import java.security.SecureRandom
 import java.security.cert.X509Certificate
-import javax.net.ssl.HostnameVerifier
 import javax.net.ssl.HttpsURLConnection
 import javax.net.ssl.SSLContext
 import javax.net.ssl.TrustManager
 import javax.net.ssl.X509TrustManager
 
-// 1. 定义数据类 (放在 object 外部)
 data class FontConfig(
     val code: String,
     val name: String,
@@ -38,7 +34,6 @@ data class FontConfig(
     val url: String
 )
 
-// 2. 定义单例对象 (确保文件中只有一个 object FontManager)
 object FontManager {
     private const val PREF_FONT = "app_font_pref"
     private const val KEY_CURRENT_FONT = "current_font_key"
@@ -48,34 +43,59 @@ object FontManager {
     private lateinit var prefs: SharedPreferences
     private lateinit var appContext: Context
 
-    // 基础 URL
-    private const val BASE_URL = "https://xn--r7qu00bb2c.top/font"
+    // 文楷 Lite Release v1.521 加速基地址
+    private const val WK_BASE = "https://github.com/lxgw/LxgwWenKai-Lite/releases/download/v1.521"
 
-    // 字体列表配置
+    // 微软雅黑托管地址 (第三方)
+    private const val YAHEI_URL = "https://mirror.ghproxy.com/https://raw.githubusercontent.com/dolbydu/font/master/unicode/Microsoft%20Yahei.ttf"
+
+    // 字体列表：每两个一组，偶数位(Index 1,3,5,7)为右侧列
     val fontList = listOf(
+        // Row 1
         FontConfig("SYSTEM", "系统默认", "", ""),
-        FontConfig("YAHEI", "微软雅黑", "msyh.ttf", "https://111.228.58.72:41347/down/XscBKv1akCLx.ttf"),
-        FontConfig("WK_REGULAR", "文楷-标准", "LXGWWenKai-Regular.ttf", "https://111.228.58.72:41347/down/9CbvERNEb3zs.ttf"),
-        FontConfig("WK_MONO_REG", "文楷等宽-标准", "LXGWWenKaiMono-Regular.ttf", "https://111.228.58.72:41347/down/wIQMhPiwK5QR.ttf"),
-        FontConfig("WK_MEDIUM", "文楷-中粗", "LXGWWenKai-Medium.ttf", "https://111.228.58.72:41347/down/dAAlXzwIpeb1.ttf"),
-        FontConfig("WK_MONO_MED", "文楷等宽-中粗", "LXGWWenKaiMono-Medium.ttf", "https://111.228.58.72:41347/down/VUkgerewRaQN.ttf"),
-        FontConfig("WK_LIGHT", "文楷-细体", "LXGWWenKai-Light.ttf", "https://111.228.58.72:41347/down/hq1M3lhmLKja.ttf"),
-        FontConfig("WK_MONO_LGT", "文楷等宽-细体", "LXGWWenKaiMono-Light.ttf", "https://111.228.58.72:41347/down/9CbvERNEb3zs.ttf")
+        FontConfig("YAHEI", "微软雅黑", "https://111.228.58.72:41347/down/XscBKv1akCLx.ttf", YAHEI_URL),
+
+        // Row 2
+        FontConfig(
+            "WK_LITE_REG", "文楷-标准",
+            "LXGWWenKaiLite-Regular.ttf", "$WK_BASE/LXGWWenKaiLite-Regular.ttf"
+        ),
+        FontConfig(
+            "WK_MONO_LITE_REG", "文楷等宽-标准",
+            "LXGWWenKaiMonoLite-Regular.ttf", "$WK_BASE/LXGWWenKaiMonoLite-Regular.ttf"
+        ),
+
+        // Row 3
+        FontConfig(
+            "WK_LITE_MED", "文楷-中粗",
+            "LXGWWenKaiLite-Medium.ttf", "$WK_BASE/LXGWWenKaiLite-Medium.ttf"
+        ),
+        FontConfig(
+            "WK_MONO_LITE_MED", "文楷等宽-中粗",
+            "LXGWWenKaiMonoLite-Medium.ttf", "$WK_BASE/LXGWWenKaiMonoLite-Medium.ttf"
+        ),
+
+        // Row 4
+        FontConfig(
+            "WK_LITE_LGT", "文楷-细体",
+            "LXGWWenKaiLite-Light.ttf", "$WK_BASE/LXGWWenKaiLite-Light.ttf"
+        ),
+        FontConfig(
+            "WK_MONO_LITE_LGT", "文楷等宽-细体",
+            "LXGWWenKaiMonoLite-Light.ttf", "$WK_BASE/LXGWWenKaiMonoLite-Light.ttf"
+        )
     )
 
     var currentFontFamily by mutableStateOf<FontFamily>(FontFamily.Default)
     var currentFontName by mutableStateOf("系统默认")
 
-    // 下载状态管理
     var downloadingStates = mutableMapOf<String, Boolean>()
     var isBackgroundDownloading by mutableStateOf(false)
 
-    // 初始化方法
     fun init(context: Context) {
         appContext = context.applicationContext
         prefs = context.getSharedPreferences(PREF_FONT, Context.MODE_PRIVATE)
-
-        createNotificationChannel() // 初始化通知渠道
+        createNotificationChannel()
 
         val savedFontCode = prefs.getString(KEY_CURRENT_FONT, "SYSTEM") ?: "SYSTEM"
         if (isFontDownloaded(savedFontCode)) {
@@ -85,14 +105,10 @@ object FontManager {
         }
     }
 
-    // 创建通知渠道 (Android 8.0+)
     private fun createNotificationChannel() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            val name = "资源下载"
-            val descriptionText = "显示字体下载进度"
-            val importance = NotificationManager.IMPORTANCE_LOW
-            val channel = NotificationChannel(CHANNEL_ID, name, importance).apply {
-                description = descriptionText
+            val channel = NotificationChannel(CHANNEL_ID, "资源下载", NotificationManager.IMPORTANCE_LOW).apply {
+                description = "显示字体下载进度"
             }
             val notificationManager: NotificationManager =
                 appContext.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
@@ -100,29 +116,18 @@ object FontManager {
         }
     }
 
-    // 启动后台静默下载 (不带回调)
     fun startBackgroundDownload() {
-        isBackgroundDownloading = true
-        CoroutineScope(Dispatchers.IO).launch {
-            fontList.forEach { config ->
-                if (config.code != "SYSTEM" && !isFontDownloaded(config.code)) {
-                    // 调用下面的 downloadFont，传入空的回调
-                    downloadFont(config.code) { }
-                }
-            }
-            isBackgroundDownloading = false
-        }
+        // 默认不开启后台自动下载，节省流量
     }
 
-    // 检查是否已下载
     fun isFontDownloaded(fontCode: String): Boolean {
         if (fontCode == "SYSTEM") return true
         val config = fontList.find { it.code == fontCode } ?: return false
         val file = File(appContext.filesDir, "fonts/${config.fileName}")
-        return file.exists() && file.length() > 10240
+        // Lite字体通常 > 1MB，设100KB阈值防止空文件
+        return file.exists() && file.length() > 102400
     }
 
-    // 切换字体
     fun switchFont(fontCode: String) {
         if (isFontDownloaded(fontCode)) {
             prefs.edit().putString(KEY_CURRENT_FONT, fontCode).apply()
@@ -130,19 +135,16 @@ object FontManager {
         }
     }
 
-    // [核心] 下载字体 (带进度回调)
-    // [核心] 下载字体 (带进度回调 + 忽略SSL校验)
     suspend fun downloadFont(fontCode: String, onProgress: (Float) -> Unit): Boolean {
         val config = fontList.find { it.code == fontCode } ?: return false
         if (config.url.isEmpty()) return false
 
         withContext(Dispatchers.Main) { downloadingStates[fontCode] = true }
 
-        // 准备通知
         val notifyManager = NotificationManagerCompat.from(appContext)
         val builder = NotificationCompat.Builder(appContext, CHANNEL_ID)
-            .setSmallIcon(R.drawable.stat_sys_download)
-            .setContentTitle("正在下载: ${config.name}")
+            .setSmallIcon(android.R.drawable.stat_sys_download)
+            .setContentTitle("下载中: ${config.name}")
             .setPriority(NotificationCompat.PRIORITY_LOW)
             .setOngoing(true)
             .setProgress(100, 0, false)
@@ -152,33 +154,24 @@ object FontManager {
         return withContext(Dispatchers.IO) {
             var success = false
             try {
+                android.util.Log.d("FontDownload", "Start downloading: ${config.url}")
                 val url = URL(config.url)
                 val connection = url.openConnection() as HttpURLConnection
 
-                // ▼▼▼▼▼▼ 核心修改区域 ▼▼▼▼▼▼
-                // 如果是 HTTPS，强制信任所有证书
                 if (connection is HttpsURLConnection) {
-                    // 1. 创建一个信任所有证书的 TrustManager
                     val trustAllCerts = arrayOf<TrustManager>(object : X509TrustManager {
                         override fun getAcceptedIssuers(): Array<X509Certificate> = arrayOf()
                         override fun checkClientTrusted(certs: Array<X509Certificate>, authType: String) {}
                         override fun checkServerTrusted(certs: Array<X509Certificate>, authType: String) {}
                     })
-
-                    // 2. 初始化 SSLContext
                     val sc = SSLContext.getInstance("SSL")
                     sc.init(null, trustAllCerts, SecureRandom())
-
-                    // 3. 应用 SocketFactory (注意这里全是小写 ssl)
                     connection.sslSocketFactory = sc.socketFactory
-
-                    // 4. 忽略主机名校验 (允许 IP 直连)
-                    connection.hostnameVerifier = HostnameVerifier { _, _ -> true }
+                    connection.hostnameVerifier = javax.net.ssl.HostnameVerifier { _, _ -> true }
                 }
-                // ▲▲▲▲▲▲ 修改结束 ▲▲▲▲▲▲
 
-                connection.connectTimeout = 15000
-                connection.readTimeout = 15000
+                connection.connectTimeout = 30000
+                connection.readTimeout = 60000
                 connection.connect()
 
                 if (connection.responseCode == HttpURLConnection.HTTP_OK) {
@@ -192,7 +185,7 @@ object FontManager {
                     val finalFile = File(fontDir, config.fileName)
 
                     val outputStream = FileOutputStream(tmpFile)
-                    val data = ByteArray(4096)
+                    val data = ByteArray(8192)
                     var total: Long = 0
                     var count: Int
                     var lastNotifyTime = 0L
@@ -206,7 +199,7 @@ object FontManager {
                             onProgress(progress)
 
                             val now = System.currentTimeMillis()
-                            if (now - lastNotifyTime > 500) {
+                            if (now - lastNotifyTime > 300) {
                                 builder.setProgress(100, (progress * 100).toInt(), false)
                                     .setContentText("${(progress * 100).toInt()}%")
                                 try { notifyManager.notify(NOTIFICATION_ID, builder.build()) } catch (e: SecurityException) {}
@@ -222,17 +215,12 @@ object FontManager {
                         success = true
                     }
                 } else {
-                    // 错误提示
-                    withContext(Dispatchers.Main) {
-                        Toast.makeText(appContext, "下载失败: ${connection.responseCode}", Toast.LENGTH_LONG).show()
-                    }
+                    android.util.Log.e("FontDownload", "Failed: HTTP ${connection.responseCode}")
                 }
             } catch (e: Exception) {
                 e.printStackTrace()
+                android.util.Log.e("FontDownload", "Exception: ${e.message}")
                 success = false
-                withContext(Dispatchers.Main) {
-                    Toast.makeText(appContext, "出错: ${e.localizedMessage}", Toast.LENGTH_LONG).show()
-                }
             } finally {
                 withContext(Dispatchers.Main) { downloadingStates[fontCode] = false }
                 try { notifyManager.cancel(NOTIFICATION_ID) } catch (e: SecurityException) {}
@@ -241,7 +229,6 @@ object FontManager {
         }
     }
 
-    // 应用字体到 Compose
     private fun applyFont(fontCode: String) {
         val config = fontList.find { it.code == fontCode }
 
@@ -253,7 +240,7 @@ object FontManager {
 
         try {
             val file = File(appContext.filesDir, "fonts/${config.fileName}")
-            if (file.exists()) {
+            if (file.exists() && file.length() > 102400) {
                 val typeface = Typeface.createFromFile(file)
                 currentFontFamily = FontFamily(typeface)
                 currentFontName = config.name
