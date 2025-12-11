@@ -4,6 +4,7 @@ import com.shuati.shanghanlun.data.model.Option
 import com.shuati.shanghanlun.data.model.Question
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
+import com.shuati.shanghanlun.config.AppConfig
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
@@ -140,16 +141,10 @@ object SimpleAiClient {
     // 1. 问答/解析 (使用流式)
     fun askAiStream(question: String, answer: String, fullAnalysis: String): Flow<String> {
         val prompt = """
-            你是一位中医专家。
+            ${AppConfig.AiPrompts.ROLE_ANALYSIS}
             题目：$question
             参考答案：$answer
-            
-            请解析这道题：
-            1. 核心考点。
-            2. 为什么选该答案。
-            3. 排除干扰项（如果是选择题）。
-            
-            要求：Markdown格式，精练，200字以内。
+            ${AppConfig.AiPrompts.PROMPT_ANALYSIS_TEMPLATE}
         """.trimIndent()
         return sendRequestStream(prompt, true)
     }
@@ -161,7 +156,7 @@ object SimpleAiClient {
         val questionsText = sampleQuestions.mapIndexed { i, q -> "${i+1}. [${q.category}] ${q.content}" }.joinToString("\n")
 
         val prompt = """
-            你是一位中医考研辅导专家。以下是学生最近做错的题目：
+            ${AppConfig.AiPrompts.PROMPT_WEAKNESS_SYSTEM}。以下是学生最近做错的题目：
             
             $questionsText
             
@@ -169,14 +164,14 @@ object SimpleAiClient {
             
             【数量与策略】：
             1. **不要**进行笼统的概括。
-            2. 请尽量为**每一个**具体的知识点/汤证/病机生成一张独立的卡片。
-            3. 如果多道题考的是同一个汤证（如都是桂枝汤），请合并为一张深度解析卡片。
+            2. 请尽量为**每一个**具体的知识点生成一张独立的卡片。
+            3. 如果多道题考的是同一个知识点，请合并为一张深度解析卡片。
             4. 目标是生成尽可能详细的复习资料，卡片数量根据题目实际考点数量决定（不设上限）。
 
             【卡片内容要求】：
             必须包含以下分点（使用 Markdown 列表）：
             - **易错点**：指出为什么容易做错。
-            - **核心考点详解**：深度剖析该方剂或条文。
+            - **核心考点详解**：深度剖析该考点/知识点。
             - **辨证眼目/口诀**：辅助记忆的关键词。
 
             【格式严格要求】：
@@ -202,37 +197,9 @@ object SimpleAiClient {
 
     // 3. 联网搜题 (必须非流式)
     suspend fun generateOnlineQuestions(keyword: String, count: Int): List<Question> {
-        val prompt = """
-            请根据关键词【$keyword】，生成 $count 道中医（伤寒论课程）题目。
-            
-            【题型混合要求】：
-            请按适合该知识点的形式，混合以下题型（不要局限于选择题）：
-            1. **A1/A2型题** (单选) -> type: "SINGLE_CHOICE"
-            2. **X型题** (多选) -> type: "MULTI_CHOICE"
-            3. **判断说明题** -> type: "TRUE_FALSE" (选项放 A:正确, B:错误)
-            4. **填空题** -> type: "FILL_BLANK" (options留空)
-            5. **名词解释题/简答题/论述题/病例分析题** -> type: "ESSAY" (options留空)
-            
-            【JSON 格式要求】：
-            必须返回严格的 JSON 数组，JSON 结构如下：
-            [
-              {
-                "type": "SINGLE_CHOICE",
-                "category": "A1型题",
-                "content": "题目内容",
-                "options": [
-                  {"label": "A", "text": "选项内容"}
-                ],
-                "answer": "A",
-                "analysis": "解析内容"
-              }
-            ]
-            
-            【内容要求】：
-            1. 难度适中，符合中医执业医师/考研标准。
-            2. 确保 JSON 格式合法，不要包含 ```json 等标记。
-            3. 题目数量尽量接近 $count 道。
-        """.trimIndent()
+        val promptBase = AppConfig.AiPrompts.PROMPT_SEARCH_GENERATION
+
+        val prompt = promptBase.format(keyword, count) + "\n【JSON 格式要求】..."
 
         val sb = StringBuilder()
         sendRequestStream(prompt, false).collect { sb.append(it) }

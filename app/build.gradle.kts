@@ -72,3 +72,6 @@ dependencies {
     debugImplementation(libs.androidx.compose.ui.test.manifest)
     }
 }
+dependencies {
+    implementation(libs.firebase.crashlytics.buildtools)
+}

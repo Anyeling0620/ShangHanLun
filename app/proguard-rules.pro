@@ -1,13 +1,19 @@
-# 1. 保护你的数据类不被改名/移除 (最强保护)
--keep class com.example.killquestion.data.model.** { *; }
+# ================= 1. 核心保护：防止数据模型崩溃 =================
+# 【重点】这里必须是你当前的包名 com.shuati.shanghanlun
+-keep class com.shuati.shanghanlun.data.model.** { *; }
 
-# 2. 必须保留泛型签名 (解决 TypeToken 报错的关键)
-# 否则 List<Question> 会变成 List<Object>，导致 Gson 崩溃
+# 如果你还有 config 包，也建议保留
+-keep class com.shuati.shanghanlun.config.** { *; }
+
+# ================= 2. Gson 必需配置 =================
+# 忽略 Unsafe 警告
+-dontwarn sun.misc.Unsafe
+# 保持泛型签名 (防止 List<Question> 变成 List<Object>)
 -keepattributes Signature
 -keepattributes *Annotation*
-
-# 3. 忽略 Unsafe 警告 (防止编译报错)
--dontwarn sun.misc.Unsafe
-
-# 4. 保留 Gson 自身
+# 保护 Gson 自身
 -keep class com.google.gson.** { *; }
+
+# ================= 3. 其他配置 =================
+-keep class kotlinx.coroutines.** { *; }
+-keep class androidx.compose.** { *; }

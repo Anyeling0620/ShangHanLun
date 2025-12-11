@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
+import com.google.firebase.crashlytics.buildtools.reloc.com.google.common.reflect.TypeToken
 import com.shuati.shanghanlun.data.local.CustomQuestionStorage
 import com.shuati.shanghanlun.data.local.MistakeManager
 import com.shuati.shanghanlun.data.local.ProgressManager // 确保导入了 ProgressManager
@@ -11,6 +12,13 @@ import com.shuati.shanghanlun.data.model.Question
 import com.shuati.shanghanlun.data.model.QuestionWrapper
 import com.shuati.shanghanlun.util.ChineseStringComparator
 import com.google.gson.Gson
+import com.shuati.shanghanlun.config.AppConfig
+import java.io.InputStreamReader
+import java.util.zip.GZIPInputStream
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 object QuestionRepository {
     private var allQuestions = mutableListOf<Question>() // 改为 MutableList
@@ -28,37 +36,76 @@ object QuestionRepository {
     fun load(context: Context) {
         if (isLoaded) return
 
-        try {
-            // [修改] 显式声明变量类型，确保不被错误推断
-            val jsonString: String = context.assets.open("questions_full.json").bufferedReader().use {
-                it.readText()
+        CoroutineScope(Dispatchers.IO).launch {
+            try {
+                // 1. [IO线程] 读取文件
+                val assetName = AppConfig.ASSET_QUESTION_FILE
+                val jsonString = context.assets.open(assetName).bufferedReader().use { it.readText() }
+
+                // 2. [IO线程] 解析 JSON
+                val loadedList = mutableListOf<Question>()
+                if (jsonString.trim().startsWith("[")) {
+                    val type = object : TypeToken<List<Question>>() {}.type
+                    val list: List<Question>? = Gson().fromJson(jsonString, type)
+                    if (list != null) loadedList.addAll(list)
+                } else {
+                    val wrapper = Gson().fromJson(jsonString, QuestionWrapper::class.java)
+                    if (wrapper != null) loadedList.addAll(wrapper.data)
+                }
+
+                // 3. [IO线程] 提前准备好本地题库
+                val customQuestions = CustomQuestionStorage.getAll()
+                val finalAllQuestions = mutableListOf<Question>()
+                finalAllQuestions.addAll(loadedList)
+                finalAllQuestions.addAll(customQuestions)
+
+                // 4. [IO线程 - 关键优化] 在后台就把最耗时的排序和分组做完！
+                // 之前这些是在 refreshIndexes() 里主线程做的，现在我们提前做
+
+                // 4.1 准备 Map
+                val byCategory = finalAllQuestions.groupBy { it.category }
+                val byChapter = finalAllQuestions.groupBy { it.chapter }
+                val byId = finalAllQuestions.associateBy { it.id }.toMutableMap()
+
+                // 4.2 准备排序后的 List (中文排序很耗时，务必在后台做)
+                val comparator = com.shuati.shanghanlun.util.ChineseStringComparator() // 确保引用了你的比较器
+                val catList = byCategory.keys.filter { !it.contains("B型") }.sortedWith(comparator)
+                val chapList = byChapter.keys.sortedWith(comparator)
+
+                // 5. [主线程] 只做最后一步赋值，瞬间完成
+                withContext(Dispatchers.Main) {
+                    if (finalAllQuestions.isNotEmpty()) {
+                        // 更新内存中的总表
+                        allQuestions.clear()
+                        allQuestions.addAll(finalAllQuestions)
+
+                        // 直接赋值预计算好的结果，不再调用耗时的 refreshIndexes()
+                        questionsByCategory.clear()
+                        questionsByCategory.putAll(byCategory)
+
+                        questionsByChapter.clear()
+                        questionsByChapter.putAll(byChapter)
+
+                        questionsById = byId
+
+                        // 更新 Compose 状态 (这步会触发 UI 刷新，但因为数据已准备好，会非常快)
+                        categoryList = catList
+                        chapterList = chapList
+
+                        isLoaded = true
+                        loadError = null
+                        android.util.Log.d("QuizDebug", "✅ 加载完成，UI 已刷新")
+                    } else {
+                        loadError = "解析为空"
+                    }
+                }
+
+            } catch (e: Exception) {
+                e.printStackTrace()
+                withContext(Dispatchers.Main) {
+                    loadError = "加载失败: ${e.message}"
+                }
             }
-
-            // [修改] 显式声明 wrapper 类型
-            val wrapper: QuestionWrapper? = Gson().fromJson(jsonString, QuestionWrapper::class.java)
-
-            // [安全检查] 避免 wrapper 为空导致空指针
-            if (wrapper != null) {
-                val staticQuestions: List<Question> = wrapper.data
-
-                // 2. 加载本地存储的动态题库
-                val customQuestions: List<Question> = CustomQuestionStorage.getAll()
-
-                // 3. 合并
-                allQuestions.clear()
-                allQuestions.addAll(staticQuestions)
-                allQuestions.addAll(customQuestions)
-
-                // 4. 重建索引
-                refreshIndexes()
-
-                isLoaded = true
-            } else {
-                loadError = "题库解析结果为空"
-            }
-        } catch (e: Exception) { // 捕获所有异常
-            e.printStackTrace()
-            loadError = "数据解析错误: ${e.message}"
         }
     }
 

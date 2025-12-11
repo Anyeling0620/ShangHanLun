@@ -34,12 +34,14 @@ import com.shuati.shanghanlun.ui.theme.MistakeGradient
 import com.shuati.shanghanlun.ui.theme.TextSecondary
 import com.shuati.shanghanlun.ui.theme.ZenDark
 import com.shuati.shanghanlun.ui.theme.ZenGreenPrimary
+import com.shuati.shanghanlun.config.AppConfig
 
 @Composable
 fun StartScreen(
     onModeSelect: (String) -> Unit,
     onWeaknessAnalysisClick: () -> Unit // [新增回调]
 ) {
+    val isDataLoaded = QuestionRepository.isLoaded
     val trigger = MistakeManager.mistakeChangeTrigger
     val mistakeCount = remember(trigger) { MistakeManager.getAllMistakeIds().size }
 
@@ -86,14 +88,14 @@ fun StartScreen(
         ) {
             Column(modifier = Modifier.weight(1f)) {
                 Text(
-                    text = "伤寒论",
+                    text = AppConfig.UI_TITLE_MAIN,
                     style = MaterialTheme.typography.displayMedium.copy(fontFamily = FontFamily.Serif),
                     fontWeight = FontWeight.Bold,
                     color = ZenDark
                 )
                 Spacer(modifier = Modifier.height(4.dp))
                 Text(
-                    text = "中医经典 · 刷题宝典",
+                    text = AppConfig.UI_SUBTITLE_MAIN,
                     style = MaterialTheme.typography.titleMedium,
                     color = TextSecondary,
                     letterSpacing = 2.sp,
@@ -132,11 +134,13 @@ fun StartScreen(
             // 模块 1: 统计卡片
             Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(16.dp)) {
                 StatCard(
-                    Modifier.weight(1f),
-                    "总题量",
-                    "${QuestionRepository.getTotalCount()}",
-                    Icons.Default.LibraryBooks,
-                    ZenGreenPrimary
+                    modifier = Modifier.weight(1f),
+                    label = "总题量",
+                    // 这里虽然看起来没用到 isDataLoaded，但因为上面读取了它，
+                    // 所以当加载完成时，界面会自动刷新，这里就会再次调用 getTotalCount() 拿到新值
+                    value = if (isDataLoaded) "${QuestionRepository.getTotalCount()}" else "...",
+                    icon = Icons.Default.LibraryBooks,
+                    accentColor = ZenGreenPrimary
                 )
                 StatCard(
                     Modifier.weight(1f),
@@ -185,7 +189,7 @@ fun StartScreen(
         }
 
         Text(
-            text = "Designed by 邝梓濠",
+            text = AppConfig.UI_AUTHOR_CREDIT,
             style = TextStyle(
                 brush = ColorfulGradient,
                 fontSize = 14.sp,
