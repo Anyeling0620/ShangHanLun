@@ -28,6 +28,7 @@ import com.shuati.shanghanlun.data.local.AnalysisStorage
 import com.shuati.shanghanlun.data.local.CustomQuestionStorage
 import com.shuati.shanghanlun.ui.screens.OnlineSearchScreen
 import com.shuati.shanghanlun.data.local.FontManager
+import com.shuati.shanghanlun.ui.theme.KillQuestionTheme
 import com.shuati.shanghanlun.ui.theme.TextPrimary
 import com.shuati.shanghanlun.ui.theme.ZenBackgroundStart
 import com.shuati.shanghanlun.ui.theme.ZenGreenPrimary
@@ -47,14 +48,7 @@ class MainActivity : ComponentActivity() {
         FontManager.startBackgroundDownload()
 
         setContent {
-            MaterialTheme(
-                colorScheme = lightColorScheme(
-                    primary = ZenGreenPrimary,
-                    background = ZenBackgroundStart,
-                    surface = ZenSurface,
-                    onSurface = TextPrimary
-                )
-            ) {
+            KillQuestionTheme {
                 AppNavigation()
             }
         }

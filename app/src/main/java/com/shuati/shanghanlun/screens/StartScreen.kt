@@ -103,24 +103,32 @@ fun StartScreen(
                 )
             }
 
-            Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                SmallIconButton(
-                    icon = Icons.Default.Info,
-                    onClick = { showGuide = true }
-                )
-                SmallIconButton(
-                    icon = Icons.Default.Image, // 记得导入 Icons.Default.Image
-                    onClick = { showAiImageDialog = true }
-                )
-                SmallIconButton(
-                    icon = Icons.Default.Settings,
+            // 右侧：按钮组 (修改为 2x2 布局)
+            // 外层用 Column 控制两行之间的垂直间距
+            Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+
+                Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                    SmallIconButton(
+                        icon = Icons.Default.Info,
+                        onClick = { showGuide = true }
+                    )
+                    SmallIconButton(
+                            icon = Icons.Default.Settings,
                     onClick = { showSettings = true }
-                )
-                SmallIconButton(
-                    icon = Icons.Default.Psychology,
-                    // [修改] 点击直接调用外部回调
-                    onClick = onWeaknessAnalysisClick
-                )
+                    )
+
+                }
+
+                Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                    SmallIconButton(
+                        icon = Icons.Default.Image,
+                        onClick = { showAiImageDialog = true }
+                    )
+                    SmallIconButton(
+                        icon = Icons.Default.Psychology,
+                        onClick = onWeaknessAnalysisClick
+                    )
+                }
             }
         }
 

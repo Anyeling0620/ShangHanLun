@@ -106,6 +106,7 @@ def inject_gradle_config(root_dir, config):
     with open(gradle_path, 'w', encoding='utf-8') as f:
         f.write(content)
 
+
 def inject_app_config(root_dir, package_name, config):
     # 路径：.../com/shuati/{suffix}/config/AppConfig.kt
     config_path = os.path.join(root_dir, "app", "src", "main", "java",
@@ -113,16 +114,17 @@ def inject_app_config(root_dir, package_name, config):
 
     prompts = config["prompts"]
 
+    # [修改点] 这里的 ASSET_QUESTION_FILE 必须是 .json
     kotlin_code = f"""package {package_name}.config
 
 object AppConfig {{
-    const val ASSET_QUESTION_FILE = "questions_full.gz"
-    
+    const val ASSET_QUESTION_FILE = "questions_full.json"
+
     const val UI_TITLE_MAIN = "{config['app_name']}"
     const val UI_SUBTITLE_MAIN = "智能刷题系统"
     const val UI_AUTHOR_CREDIT = "Designed by 邝梓濠"
     const val VERSION_CHECK_URL = "{config['version_url']}"
-    
+
     object AiPrompts {{
         const val ROLE_ANALYSIS = "{prompts['role']}"
         val PROMPT_ANALYSIS_TEMPLATE = \"\"\"
@@ -132,7 +134,7 @@ object AppConfig {{
         val PROMPT_WEAKNESS_SYSTEM = \"\"\"
 {prompts['weakness']}
         \"\"\".trimIndent()
-        
+
         val PROMPT_SEARCH_GENERATION = "{prompts['search']}"
         const val IMAGE_GEN_ROLE = "AI绘图助手"
     }}
@@ -142,35 +144,41 @@ object AppConfig {{
     with open(config_path, 'w', encoding='utf-8') as f:
         f.write(kotlin_code)
 
+
 def inject_assets(root_dir, config):
     res_dir = os.path.join(root_dir, "app", "src", "main", "res")
-    
-    # 1. [核心修复] 删除自适应图标目录 (mipmap-anydpi-v26)
-    # 必须删掉这个文件夹，否则 Android 会去找前景/背景图层，导致报错
+    assets_dir = os.path.join(root_dir, "app", "src", "main", "assets")
+
+    # 1. 删除自适应图标目录
     anydpi_dir = os.path.join(res_dir, "mipmap-anydpi-v26")
     if os.path.exists(anydpi_dir):
         shutil.rmtree(anydpi_dir)
-        print(f"      Deleted adaptive icon config: {anydpi_dir}")
 
-    # 2. 清理目标目录旧图标 (mipmap-xxhdpi)
+    # 2. 清理旧图标
     target_mipmap = os.path.join(res_dir, "mipmap-xxhdpi")
     if os.path.exists(target_mipmap):
         for file in os.listdir(target_mipmap):
-            # 删除旧的 webp 或 png，以及 xml
-            if file.startswith("ic_launcher") or file.startswith("ic_launch") or file.startswith("luanch"):
+            if file.startswith("ic_launcher"):
                 os.remove(os.path.join(target_mipmap, file))
 
     # 3. 复制新图标
-    # 注意：为了防止有些手机读缓存，建议把 ic_launcher 和 ic_launcher_round 都覆盖
     icon_dest = os.path.join(target_mipmap, "ic_launcher.png")
     icon_round_dest = os.path.join(target_mipmap, "ic_launcher_round.png")
 
     if os.path.exists(config['icon_path']):
         shutil.copy(config['icon_path'], icon_dest)
         shutil.copy(config['icon_path'], icon_round_dest)
-    
-    # 4. 替换题库
-    data_dest = os.path.join(root_dir, "app", "src", "main", "assets", "questions_full.gz")
+
+    # 4. [修改点] 处理题库文件
+    # 目标文件名改为 questions_full.json
+    data_dest = os.path.join(assets_dir, "questions_full.json")
+
+    # 务必删除母版里可能残留的 .gz 文件，防止占用体积或引起混淆
+    old_gz = os.path.join(assets_dir, "questions_full.gz")
+    if os.path.exists(old_gz):
+        os.remove(old_gz)
+
+    # 复制原料库的文件到目标位置
     if os.path.exists(config['question_file']):
         shutil.copy(config['question_file'], data_dest)
 

@@ -5,8 +5,30 @@ plugins {
 }
 
 android {
-    namespace = "com.example.killquestion"
+    namespace = "com.shuati.shanghanlun"
     compileSdk = 35
+
+    packaging {
+        packaging {
+            resources {
+                // [修正] 注意拼写是 dump_syms (有个 m)
+                excludes += "**/dump_syms/**"
+
+                // 为了保险，把下面那个 mozilla 文件夹也剔除（通常是一伙的）
+                excludes += "**/mozilla/**"
+
+                // 其他通用的垃圾剔除规则保持不变
+                excludes += "META-INF/{AL2.0,LGPL2.1}"
+                excludes += "META-INF/LICENSE*"
+                excludes += "META-INF/NOTICE*"
+                excludes += "win32-x86/**"
+                excludes += "win32-x86-64/**"
+                excludes += "linux-x86/**"
+                excludes += "linux-x86-64/**"
+                excludes += "darwin/**"
+            }
+        }
+    }
 
     defaultConfig {
         applicationId = "com.shuati.shanghanlun"

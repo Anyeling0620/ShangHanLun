@@ -1,15 +1,69 @@
-*.iml
-.gradle
-/local.properties
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
-.DS_Store
-/build
-/captures
-.externalNativeBuild
-.cxx
+# ===========================
+# Android / Gradle 构建产物
+# ===========================
+*.apk
+*.aab
+*.ap_
+*.dex
+*.class
+
+# Gradle 缓存和构建目录 (最占空间的部分)
+.gradle/
+build/
+app/build/
+**/build/
+
+# 本地配置文件 (包含 SDK 路径，每个人电脑不同，严禁上传)
 local.properties
+
+# C++ / NDK 构建产物
+.cxx/
+.externalNativeBuild/
+
+# ===========================
+# Android Studio / IntelliJ IDE 配置
+# ===========================
+.idea/
+*.iml
+*.ipr
+*.iws
+.navigation/
+captures/
+
+# ===========================
+# 敏感文件 (严禁上传!!!)
+# ===========================
+# 签名文件 (上传了泄露密钥)
+*.jks
+*.keystore
+*.pem
+*.p12
+*.key
+
+# Google 服务配置 (如果用了 Firebase)
+google-services.json
+
+# ===========================
+# Python 脚本相关 (你的工厂脚本)
+# ===========================
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
+
+# ===========================
+# 你项目特定的垃圾/临时文件
+# ===========================
+
+# 1. 工厂生成的输出目录 (生成的子APP不需要上传到主仓库)
+FactoryOutput/
+
+# 2. 之前那个 3MB+ 的垃圾文件夹 (防止复发)
+**/dump_syms/
+**/dump_sys/
+
+# 3. macOS / Windows 系统缩略图文件
+.DS_Store
+Thumbs.db
+ehthumbs.db
