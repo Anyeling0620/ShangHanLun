@@ -35,7 +35,7 @@ android {
         minSdk = 26
         targetSdk = 35
         versionCode = 3
-        versionName = "3.13"
+        versionName = "3.14"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         signingConfig = signingConfigs.getByName("debug")
